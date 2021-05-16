@@ -3,7 +3,7 @@
 Each folder contains the default implementation of a research paper. Each folder contains
 an Implementation file, Installation_Steps file and Github file referring to the source Github directory.<br/>
 
-##Note: Xiao_and_Correlation pipeline is different that the rest as it requires many other
+## Note: Xiao_and_Correlation pipeline is different that the rest as it requires many other
 parameters.<br/>
 
 **1) Installation Steps**\
