@@ -1,0 +1,1 @@
+False,/u1/sua474/Dataset/Desert/desert.csv,graph_centrality,degree,10,50,0,sliding_window,"g",0.8,spearman,True,both,554.7123027339112,megahit_2893366,megahit_590713,megahit_2655517,megahit_3546505,megahit_2881681,megahit_3250936,megahit_1451119,megahit_1100686,megahit_1565308,megahit_774373,megahit_827488

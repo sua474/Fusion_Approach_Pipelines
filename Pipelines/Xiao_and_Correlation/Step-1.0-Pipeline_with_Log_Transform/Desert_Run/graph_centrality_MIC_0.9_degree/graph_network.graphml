@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="double" for="edge" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="megahit_835663" />
+    <node id="megahit_3108145" />
+    <node id="megahit_414619" />
+    <node id="megahit_2081065" />
+    <node id="megahit_362044" />
+    <node id="megahit_1261486" />
+    <node id="megahit_96994" />
+    <node id="megahit_2446855" />
+    <node id="megahit_1012990" />
+    <node id="megahit_1611064" />
+    <edge source="megahit_835663" target="megahit_3108145">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_835663" target="megahit_414619">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_835663" target="megahit_2081065">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_835663" target="megahit_362044">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_835663" target="megahit_1261486">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_835663" target="megahit_96994">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_835663" target="megahit_2446855">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_835663" target="megahit_1012990">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_835663" target="megahit_1611064">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_3108145" target="megahit_414619">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_3108145" target="megahit_2081065">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_3108145" target="megahit_362044">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_3108145" target="megahit_1261486">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_3108145" target="megahit_96994">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_3108145" target="megahit_2446855">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_3108145" target="megahit_1012990">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_3108145" target="megahit_1611064">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_414619" target="megahit_2081065">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_414619" target="megahit_362044">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_414619" target="megahit_1261486">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_414619" target="megahit_96994">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_414619" target="megahit_2446855">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_414619" target="megahit_1012990">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_414619" target="megahit_1611064">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_2081065" target="megahit_362044">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_2081065" target="megahit_1261486">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_2081065" target="megahit_96994">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_2081065" target="megahit_2446855">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_2081065" target="megahit_1012990">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_2081065" target="megahit_1611064">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_362044" target="megahit_1261486">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_362044" target="megahit_96994">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_362044" target="megahit_2446855">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_362044" target="megahit_1012990">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_362044" target="megahit_1611064">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_1261486" target="megahit_96994">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_1261486" target="megahit_2446855">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_1261486" target="megahit_1012990">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_1261486" target="megahit_1611064">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_96994" target="megahit_2446855">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_96994" target="megahit_1012990">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_96994" target="megahit_1611064">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_2446855" target="megahit_1012990">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_2446855" target="megahit_1611064">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="megahit_1012990" target="megahit_1611064">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+  </graph>
+</graphml>
