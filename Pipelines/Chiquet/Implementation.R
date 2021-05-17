@@ -2,15 +2,20 @@ library(PLNmodels)
 library(ggplot2)
 args = commandArgs(trailingOnly=TRUE)
 
-##### Load our dataset #########################################################
-dataset <- read.csv(file = args[1],row.names=1,header=TRUE)
-taxa_names = list(row.names(dataset))
-dataset = t(dataset)
 
+##### Load our dataset #########################################################
+
+abundance <- read.csv(file = args[1],row.names=1,header=TRUE)
+taxa_names = list(row.names(abundance))
+abundance = t(abundance)
+covariates <- read.csv(file="/u1/sua474/Dataset/Desert/Transformed_Covariates.csv",row.names=1,header=TRUE)
+print(covariates)
+dataset <- prepare_data(abundance,covariates)
+print(abundance)
 ################## TO BE REMOVED WHEN WE HAVE THE COVARIATES ###################
 ##### Loading the default dataset provided with the implementation #############
-data(trichoptera)
-dataset <- prepare_data(trichoptera$Abundance, trichoptera$Covariate)
+#data(trichoptera)
+#dataset <- prepare_data(trichoptera$Abundance, trichoptera$Covariate)
 ################################################################################
 
 
