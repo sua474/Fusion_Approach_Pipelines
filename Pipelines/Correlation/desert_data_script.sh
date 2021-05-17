@@ -1,0 +1,1 @@
+python pipeline_original.py -f1 /u1/sua474/Data_files/Desert/desert.csv -m graph_centrality -e kl_divergence -min 0 -c add_one -st 'all' -si 'all' -cent degree -th 0.6 -cor MIC -wt -cp both -pm -cg
