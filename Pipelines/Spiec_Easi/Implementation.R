@@ -1,33 +1,26 @@
 library(SpiecEasi)
 library(igraph)
 library(phyloseq)
+library(stringr)
+
+
 args = commandArgs(trailingOnly=TRUE)
+
+get_file_name<-function(path_to_dir)
+{
+  fn <- str_split(path_to_dir,"/",simplify = FALSE)
+  fn <- fn[[1]][lengths(fn)]
+  fn <- str_split(fn, ".csv", simplify = FALSE)
+  return (str_trim(fn[[1]][1]))
+}
+
 dataset <- read.csv(file = args[1],row.names=1,header=TRUE)
 taxa_names = list(row.names(dataset))
 
 dataset = t(dataset)
 ###################### Model Fitting #############################################
-se <- spiec.easi(dataset, method='mb', lambda.min.ratio=0.001, nlambda=25, pulsar.params=list(rep.num=10))
-se.slr     <- adj2igraph(getRefit(se),vertex.attr = taxa_names)
-slr.coord <- layout.fruchterman.reingold(se.slr)
-vsize    <- rowMeans(clr(dataset, 1))+6
-
-print(se.slr)
+se <- spiec.easi(dataset, method='mb', lambda.min.ratio=1e-2, nlambda=15, pulsar.params=list(rep.num=50))
+adjacency_matrix = as.data.frame(as.matrix(getRefit(se)))
 ##################################################################################
-
-###################### Create Graph #############################################
-d <- ncol(dataset)
-n <- nrow(dataset)
-e <- d
-
-set.seed(10010)
-graph <- make_graph('cluster', d, e)
-################################################################################
-
-##################### Plot Model ##############################################
-
-huge::huge.roc(se$est$path, graph, verbose=FALSE)
-#stars.pr(getOptMerge(se), graph, verbose=FALSE)
-
-par(mfrow=c(1,3))
-plot(se.slr, layout=slr.coord, vertex.size=8, vertex.label=NA, main="mb")
+dir.create(args[2])
+write.csv(adjacency_matrix,paste0(args[2],"Adjacency_Matrix_",get_file_name(args[1]),".csv"),row.names = FALSE)
