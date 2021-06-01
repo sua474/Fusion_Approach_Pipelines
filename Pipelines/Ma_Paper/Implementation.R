@@ -5,7 +5,7 @@ library(stringr)
 
 args = commandArgs(trailingOnly=TRUE)
 
-dir.create(args[2]) #Craetes the output dir
+dir.create(args[2]) #Creates the output dir
 
 get_file_name<-function(path_to_dir)
 {
@@ -16,9 +16,12 @@ get_file_name<-function(path_to_dir)
 }
 
 ######################### Processing Desert Dataset ########################
-dataset <- read.csv(file = args[1],row.names=1,header=TRUE)
-mclr_dataset <- mclr(t(dataset))
-pcorr <- cggm.pcorr(mclr_dataset,c(1.5,0.4,0.3,0.2,0.1,0.05),'glasso')
+dataset <- read.csv(file = args[1],header=TRUE)
+dataset <- t(t(dataset))
+
+mclr_dataset <- mclr(dataset)
+
+pcorr <- cggm.pcorr(mclr_dataset,c(1.5,0.4,0.3),'glasso')
 adjacency_matrix <- as.data.frame(pcorr$icov)   #Extracts the Adjacency Matrix
 
 #Writes Output to the file

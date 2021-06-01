@@ -14,10 +14,9 @@ get_file_name<-function(path_to_dir)
   return (str_trim(fn[[1]][1]))
 }
 
-dataset <- read.csv(file = args[1],row.names=1,header=TRUE)
-taxa_names = list(row.names(dataset))
-
-dataset = t(dataset)
+dataset <- read.csv(file = args[1],header=TRUE)
+row_names = list(row.names(dataset))
+dataset = t(t(dataset))
 ###################### Model Fitting #############################################
 se <- spiec.easi(dataset, method='mb', lambda.min.ratio=1e-2, nlambda=15, pulsar.params=list(rep.num=50))
 adjacency_matrix = as.data.frame(as.matrix(getRefit(se)))

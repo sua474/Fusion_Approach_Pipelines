@@ -12,13 +12,13 @@ get_file_name<-function(path_to_dir)
   return (str_trim(fn[[1]][1]))
 }
 
-dataset <- read.csv(file = args[1],row.names=1,header=TRUE)
+dataset <- read.csv(file = args[1],header=TRUE)
 taxa_names = list(row.names(dataset))
-dataset = t(dataset)
+#dataset = t(dataset)
 #####################################################################
 
 # Apply SPRING on QMP data.
-fit.spring <- SPRING(dataset, Rmethod = "original", quantitative = TRUE, lambdaseq = "data-specific", nlambda = 50, rep.num = 10)
+fit.spring <- SPRING(dataset, Rmethod = "original", quantitative = TRUE, lambdaseq = "data-specific", nlambda = 50, rep.num = 20)
 # StARS-selected lambda index based on the threshold (default = 0.01)
 opt.K <- fit.spring$output$stars$opt.index
 # Estimated adjacency matrix from sparse graphical modeling technique ("mb" method) (1 = edge, 0 = no edge)
