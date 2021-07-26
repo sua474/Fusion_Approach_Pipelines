@@ -735,7 +735,7 @@ def main(ab_comp, infile1, infile2, metric_name, c_type, min_count,
     process_id = proc_id
 
     global outdir
-    outdir = 'Desert_Run/'+ metric_name +'_' + correlation +'_' + str(keep_threshold) +'_'+ centrality_type
+    outdir = 'Results/'+infile1_path.split('/')[-1].split('.')[0]+'/' +metric_name +'_' + correlation +'_' + str(keep_threshold) +'_'+ centrality_type
     os.makedirs(outdir, exist_ok=True)
 
     global connectedness
