@@ -18,7 +18,7 @@ taxa_names = list(row.names(dataset))
 #####################################################################
 
 # Apply SPRING on QMP data.
-fit.spring <- SPRING(dataset, Rmethod = "original", quantitative = TRUE, lambdaseq = "data-specific", nlambda = 50, rep.num = 20)
+fit.spring <- SPRING(dataset, Rmethod = "original", quantitative = TRUE, lambdaseq = "data-specific", nlambda = as.numeric(args[3]), rep.num = 20)
 # StARS-selected lambda index based on the threshold (default = 0.01)
 opt.K <- fit.spring$output$stars$opt.index
 # Estimated adjacency matrix from sparse graphical modeling technique ("mb" method) (1 = edge, 0 = no edge)

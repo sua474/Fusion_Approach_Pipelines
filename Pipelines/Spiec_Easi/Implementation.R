@@ -6,6 +6,14 @@ library(stringr)
 
 args = commandArgs(trailingOnly=TRUE)
 
+print(args[1])
+print(args[2])
+print(args[3])
+print(as.numeric(args[3]))
+print(typeof(args[3]))
+print(args[4])
+print(args[5])
+
 get_file_name<-function(path_to_dir)
 {
   fn <- str_split(path_to_dir,"/",simplify = FALSE)
@@ -18,7 +26,7 @@ dataset <- read.csv(file = args[1],header=TRUE)
 row_names = list(row.names(dataset))
 dataset = t(t(dataset))
 ###################### Model Fitting #############################################
-se <- spiec.easi(dataset, method='mb', lambda.min.ratio=1e-2, nlambda=15, pulsar.params=list(rep.num=50))
+se <- spiec.easi(dataset, method='mb', lambda.min.ratio=as.numeric(args[3]), nlambda=as.integer(args[4]), pulsar.params=list(rep.num=as.integer(args[5])))
 adjacency_matrix = as.data.frame(as.matrix(getRefit(se)))
 ##################################################################################
 dir.create(args[2])

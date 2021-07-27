@@ -1,100 +1,100 @@
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_1.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_1/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_2.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_2/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_3.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_3/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_4.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_4/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_5.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_5/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_6.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_6/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_7.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_7/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_8.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_8/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_9.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_9/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_10.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_10/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_11.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_11/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_12.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_12/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_13.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_13/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_14.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_14/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_15.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_15/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_16.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_16/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_17.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_17/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_18.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_18/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_19.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_19/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_20.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_20/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_21.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_21/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_22.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_22/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_23.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_23/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_24.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_24/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_25.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_25/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_26.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_26/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_27.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_27/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_28.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_28/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_29.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_29/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_30.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_30/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_31.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_31/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_32.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_32/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_33.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_33/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_34.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_34/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_35.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_35/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_36.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_36/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_37.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_37/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_38.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_38/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_39.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_39/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_40.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_40/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_41.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_41/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_42.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_42/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_43.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_43/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_44.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_44/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_45.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_45/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_46.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_46/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_47.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_47/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_48.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_48/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_49.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_49/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_50.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_50/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_51.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_51/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_52.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_52/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_53.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_53/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_54.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_54/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_55.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_55/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_56.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_56/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_57.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_57/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_58.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_58/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_59.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_59/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_60.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_60/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_61.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_61/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_62.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_62/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_63.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_63/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_64.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_64/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_65.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_65/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_66.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_66/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_67.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_67/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_68.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_68/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_69.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_69/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_70.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_70/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_71.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_71/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_72.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_72/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_73.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_73/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_74.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_74/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_75.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_75/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_76.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_76/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_77.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_77/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_78.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_78/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_79.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_79/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_80.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_80/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_81.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_81/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_82.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_82/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_83.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_83/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_84.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_84/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_85.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_85/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_86.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_86/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_87.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_87/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_88.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_88/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_89.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_89/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_90.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_90/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_91.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_91/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_92.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_92/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_93.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_93/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_94.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_94/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_95.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_95/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_96.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_96/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_97.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_97/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_98.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_98/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_99.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_99/
-Rscript Implementation.R /u1/sua474/Dataset/Chiquet_For_Fusion_Approach/Chiquet_100.csv /u1/sua474/Fusion_Approach_Pipelines/Output/Spring/Chiquet_100/
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_1.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_1/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_2.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_2/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_3.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_3/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_4.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_4/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_5.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_5/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_6.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_6/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_7.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_7/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_8.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_8/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_9.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_9/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_10.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_10/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_11.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_11/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_12.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_12/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_13.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_13/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_14.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_14/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_15.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_15/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_16.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_16/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_17.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_17/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_18.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_18/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_19.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_19/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_20.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_20/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_21.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_21/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_22.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_22/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_23.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_23/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_24.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_24/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_25.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_25/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_26.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_26/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_27.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_27/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_28.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_28/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_29.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_29/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_30.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_30/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_31.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_31/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_32.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_32/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_33.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_33/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_34.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_34/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_35.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_35/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_36.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_36/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_37.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_37/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_38.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_38/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_39.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_39/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_40.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_40/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_41.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_41/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_42.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_42/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_43.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_43/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_44.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_44/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_45.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_45/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_46.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_46/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_47.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_47/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_48.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_48/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_49.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_49/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_50.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_50/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_51.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_51/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_52.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_52/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_53.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_53/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_54.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_54/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_55.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_55/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_56.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_56/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_57.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_57/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_58.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_58/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_59.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_59/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_60.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_60/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_61.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_61/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_62.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_62/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_63.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_63/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_64.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_64/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_65.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_65/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_66.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_66/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_67.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_67/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_68.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_68/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_69.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_69/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_70.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_70/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_71.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_71/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_72.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_72/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_73.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_73/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_74.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_74/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_75.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_75/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_76.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_76/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_77.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_77/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_78.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_78/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_79.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_79/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_80.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_80/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_81.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_81/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_82.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_82/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_83.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_83/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_84.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_84/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_85.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_85/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_86.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_86/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_87.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_87/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_88.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_88/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_89.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_89/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_90.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_90/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_91.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_91/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_92.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_92/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_93.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_93/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_94.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_94/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_95.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_95/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_96.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_96/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_97.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_97/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_98.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_98/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_99.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_99/ $2
+Rscript /u1/cec383/Fusion_Approach_Pipelines/Pipelines/Spring/Implementation.R /u1/cec383/Fusion_Approach_Pipelines/$3/Chiquet_100.csv /u1/cec383/Fusion_Approach_Pipelines/Output/$1/Chiquet_100/ $2

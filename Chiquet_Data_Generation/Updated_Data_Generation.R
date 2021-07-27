@@ -83,7 +83,7 @@ u = 0.1  # As specified in the Chiquet's paper
 taxa = 10
 number_of_samples = 30 
 number_of_draws = 2000
-datasets_to_be_generated =  25
+datasets_to_be_generated =  200
 #############################################################################################
 
 for (x in 1:datasets_to_be_generated) 
@@ -92,6 +92,6 @@ for (x in 1:datasets_to_be_generated)
  abundance_data = generate_abundance(results$ai,number_of_draws,taxa,number_of_samples)
   
  print(count_zero_percentage(abundance_data))
- write.csv(as.data.frame(as.matrix(results$ground_truth)), file=paste(c("I:/Research_Technician/Dataset/Chiquet_Data_new/Ground_Truth_", x, ".csv"),collapse = ""),row.names=FALSE)
- write.csv(as.data.frame(as.matrix(abundance_data)), file=paste(c("I:/Research_Technician/Dataset/Chiquet_Data_new/Chiquet_", x, ".csv"),collapse = ""),row.names=FALSE)
+ write.csv(as.data.frame(as.matrix(results$ground_truth)), file=paste(c("/u1/cec383/Fusion_Approach_Pipelines/Dataset/Ground_Truth_", x, ".csv"),collapse = ""),row.names=FALSE)
+ write.csv(as.data.frame(as.matrix(abundance_data)), file=paste(c("/u1/cec383/Fusion_Approach_Pipelines/Dataset/Chiquet_", x, ".csv"),collapse = ""),row.names=FALSE)
 }
