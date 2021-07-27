@@ -1,0 +1,1 @@
+python BlockWise_BruteForce.py -f1 "/u1/sua474/Data_files/Chiquet_Data/Chiquet_1.csv" -r "/u1/sua474/Thesis_Results/Chiquet_Data/Chiquet_1/"

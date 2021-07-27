@@ -538,6 +538,7 @@ def create_pca_plot(features):
     #plt.show()
 
 def plot_graph_centrality(features, cond_type, corr_type, corr_dir, keep_thresh, weighted):
+    global outdir
     data = features.copy()
     # create a graph of the edges/nodes using the same centrality type as used to select the features
     # this is the top25 file stuff
@@ -565,7 +566,7 @@ def plot_graph_centrality(features, cond_type, corr_type, corr_dir, keep_thresh,
     df_b = pd.melt(temp, 'var1', var_name='var2', value_name=attr)
     df_b = df_b.loc[((df_b[attr] <= 1 - keep_thresh) & (df_b[attr] > 0.0)),:]  # take only those edge pairs that made the cut
     df_g = networkx.from_pandas_edgelist(df_b, 'var1', 'var2', attr)  # takes a list of valid edges
-    networkx.write_graphml(df_g, 'graph_network.graphml')
+    networkx.write_graphml(df_g, outdir+'/graph_network.graphml')
     networkx.draw(df_g, node_color='dodgerblue',edge_color='dimgrey', with_labels=True)
 
     plt.savefig(os.path.join(outdir,"graph_network.png"))
@@ -711,13 +712,13 @@ def main(ab_comp, infile1, infile2, metric_name, c_type, min_count,
          total_select, iteration_select, pca_components, smooth_type,
          window_size, centrality_type, keep_threshold, correlation,
          weighted, corr_prop, evaluation_type, plot_metric,
-         create_graph, plot_pca, naming_file, proc_id, min_connected):
+         create_graph, plot_pca, naming_file, proc_id, min_connected,result_dir):
 
 
     t_start = time.perf_counter()
 
     infile1_path = infile1
-    infile1_name = os.path.splitext(infile1_path)[0]
+    infile1_name = infile1_path.split('/')[-1].split('.')[0]
     infile2_path = ''
     infile2_name = ''
     if ab_comp:
@@ -735,7 +736,7 @@ def main(ab_comp, infile1, infile2, metric_name, c_type, min_count,
     process_id = proc_id
 
     global outdir
-    outdir = 'Desert_Run/'+ metric_name +'_' + correlation +'_' + str(keep_threshold) +'_'+ centrality_type
+    outdir = result_dir+infile1_path.split('/')[-1].split('.')[0]+'/' +metric_name +'_' + correlation +'_' + str(keep_threshold) +'_'+ centrality_type
     os.makedirs(outdir, exist_ok=True)
 
     global connectedness
@@ -823,15 +824,15 @@ def main(ab_comp, infile1, infile2, metric_name, c_type, min_count,
 
     #add the metric information to the important features and append to the metric results csv
     feature_row = metric_params + important_feature_list
-    with open('metric_results.csv', 'a') as f:
+    with open(outdir+'/metric_results.csv', 'a') as f:
         writer = csv.writer(f)
         writer.writerow(feature_row)
 
     # get the abundances for each of the important features and write those to a new file
     #print('final important features', important_features)
-    important_features.to_csv(os.path.join(outdir,metric_filename))
+    important_features.to_csv(outdir+'/'+metric_filename)
 
-    feature_abundances.to_csv(os.path.join(outdir, abundance_filename), index=False)
+    feature_abundances.to_csv(outdir+'/'+abundance_filename, index=False)
 
     '''evaluation_results = evaluation(evaluation_type, file_a, file_b, important_feature_list, iteration_select, c_type)
     eval_row = eval_params + evaluation_results
@@ -850,7 +851,8 @@ def main(ab_comp, infile1, infile2, metric_name, c_type, min_count,
                 'weighted':weighted, 'corr_prop':corr_prop, 'evaluation_type':evaluation_type,
                 'plot_metric':plot_metric, 'create_graph':create_graph, 'plot_pca':plot_pca,
                 'naming_file':naming_file, 'proc_id':proc_id, 'runtime':runtime, 'min_connected':min_connected,
-                'connectedness': connectedness}
+                'connectedness': connectedness, 'Result_dir':result_dir}
+                
     parameter_df = pd.DataFrame(list(param_dict.items()),
                                 columns = ['Parameter','Values'])
     param_filename = 'parameter_list-{}.csv'.format(process_id)
@@ -865,6 +867,7 @@ if __name__ == "__main__":
     parser.add_argument('--ab_comp', '-ab', action='store_true', default=False)
     parser.add_argument('--file1', '-f1', help='First file to read in')
     parser.add_argument('--file2', '-f2', help='Second file to user for A/B comparison')
+    parser.add_argument('--resultdir', '-r', help='Result Directory')
     parser.add_argument('--metric', '-m', help='Metric to use')
     parser.add_argument('--evaluation', '-e', help='Evaluation type to use')
     parser.add_argument('--min_features', '-min', help='Features with counts below this number will be removed', type=int, default=0)
@@ -926,13 +929,13 @@ if __name__ == "__main__":
     naming_file = args.naming_file
     run_number = args.run_number
     min_connected = args.min_connected
-
+    result_dir = args.resultdir
 
     main(ab, file1, file2, metric, conditioning, min_features,
          total_select, iteration_select, pca_components, smooth,
          window_size, centrality_type, keep_threshold, correlation,
          weighted, correlation_property, evaluation, plot_metric,
-         create_graph, plot_pca, naming_file,run_number,min_connected)
+         create_graph, plot_pca, naming_file,run_number,min_connected,result_dir)
 
 
 
