@@ -313,6 +313,8 @@ def graph_centrality(df, cent_type='betweenness', keep_thresh=0.5, cond_type='ad
                 centrality = networkx.eigenvector_centrality(largest_subgraph)
             except:
                 print('eigenvector failed to converge... returning')
+                print('eigenvector failed to converge... returning')
+                print('eigenvector failed to converge... returning')
                 disjoint = True
                 return pd.DataFrame()
         else:
@@ -939,7 +941,8 @@ if __name__ == "__main__":
 
 
 
-
-# front end takes in a file parses each line to set the selection parameters.
-# for each selection parameter, put the output files into a folder.
-    # Then output the folder at the end.
+# Loading packages here
+import sys
+import argparse
+import numpy as np
+#import skbio as sb  # Use this for ANOSIM

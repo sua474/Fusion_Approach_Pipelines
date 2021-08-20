@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="double" for="edge" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="V24" />
+    <node id="V25" />
+    <node id="V37" />
+    <node id="V13" />
+    <node id="V30" />
+    <node id="V9" />
+    <edge source="V24" target="V25">
+      <data key="d0">0.022921212794110524</data>
+    </edge>
+    <edge source="V24" target="V37">
+      <data key="d0">0.015774424695048972</data>
+    </edge>
+    <edge source="V24" target="V13">
+      <data key="d0">0.031864514090376383</data>
+    </edge>
+    <edge source="V24" target="V30">
+      <data key="d0">0.01738957865663482</data>
+    </edge>
+    <edge source="V24" target="V9">
+      <data key="d0">0.01457766039275643</data>
+    </edge>
+    <edge source="V25" target="V37">
+      <data key="d0">0.026963296240786194</data>
+    </edge>
+    <edge source="V25" target="V13">
+      <data key="d0">0.038298823014818795</data>
+    </edge>
+    <edge source="V25" target="V30">
+      <data key="d0">0.023041403512141345</data>
+    </edge>
+    <edge source="V25" target="V9">
+      <data key="d0">0.020958656324473135</data>
+    </edge>
+    <edge source="V37" target="V13">
+      <data key="d0">0.023973341937405745</data>
+    </edge>
+    <edge source="V37" target="V30">
+      <data key="d0">0.020052183626865006</data>
+    </edge>
+    <edge source="V37" target="V9">
+      <data key="d0">0.01852634527301167</data>
+    </edge>
+    <edge source="V13" target="V30">
+      <data key="d0">0.026360481029510496</data>
+    </edge>
+    <edge source="V13" target="V9">
+      <data key="d0">0.02424312676228546</data>
+    </edge>
+    <edge source="V30" target="V9">
+      <data key="d0">0.014178558824392673</data>
+    </edge>
+  </graph>
+</graphml>

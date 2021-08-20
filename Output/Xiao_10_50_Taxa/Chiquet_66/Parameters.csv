@@ -1,0 +1,8 @@
+Parameter Name,Value
+File Processed,/u1/cec383/Fusion_Approach_Pipelines/Dataset/Taxa_50/Chiquet_10/Chiquet_66.csv
+Block Indexes,"[10, 20, 30, 40, 50]"
+Selection Method:,max
+Discard Threshold:,5.0
+Is Iterative,False
+Start Time,2021-08-19 21:45:12.098206
+End Time,2021-08-20 00:04:16.356231

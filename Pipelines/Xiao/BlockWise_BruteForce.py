@@ -541,7 +541,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
 ############################### Execution Parameters #######################################################################
-    block_indxes = [10] #maximum number of brute force iteration
+    block_indxes = [10,20,30,40,50] #maximum number of brute force iteration
     #result_dir = 'result/test_bw/' #result directory
     discard_threhold = 5.0 #set hyperplane values to 0 if less than +- discard_threshold
     voting_type = 'max'

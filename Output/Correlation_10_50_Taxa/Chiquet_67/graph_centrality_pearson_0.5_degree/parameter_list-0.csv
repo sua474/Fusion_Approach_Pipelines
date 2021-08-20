@@ -1,0 +1,27 @@
+,Parameter,Values
+0,ab_comp,False
+1,infile1,/u1/cec383/Fusion_Approach_Pipelines/Dataset/Taxa_50/Chiquet_10/Chiquet_67.csv
+2,infile2,
+3,metric_name,graph_centrality
+4,c_type,add_one
+5,min_count,0
+6,total_select,10
+7,iteration_select,50
+8,pca_components,4
+9,smooth_type,sliding_window
+10,window_size,
+11,centrality_type,degree
+12,keep_threshold,0.5
+13,correlation,pearson
+14,weighted,True
+15,corr_prop,both
+16,evaluation_type,kl_divergence
+17,plot_metric,True
+18,create_graph,True
+19,plot_pca,False
+20,naming_file,
+21,proc_id,0
+22,runtime,0.09209075849503279
+23,min_connected,0
+24,connectedness,"[(7, 50, 14.0)]"
+25,Result_dir,/u1/cec383/Fusion_Approach_Pipelines/Output/Correlation_10_50_Taxa/

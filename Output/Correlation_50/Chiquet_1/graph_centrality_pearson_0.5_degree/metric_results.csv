@@ -1,0 +1,2 @@
+False,/u1/cec383/Fusion_Approach_Pipelines/Chiquet/Chiquet_50/Chiquet_1.csv,graph_centrality,degree,10,50,0,sliding_window,add_one,0.5,pearson,True,both,0.03332734201103449,V1
+False,/u1/cec383/Fusion_Approach_Pipelines/Chiquet/Chiquet_50/Chiquet_1.csv,graph_centrality,degree,10,50,0,sliding_window,add_one,0.5,pearson,True,both,0.03619822766631842,V1

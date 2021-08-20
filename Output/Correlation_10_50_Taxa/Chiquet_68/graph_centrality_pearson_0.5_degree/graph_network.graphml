@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="double" for="edge" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="V30" />
+    <node id="V20" />
+    <node id="V37" />
+    <node id="V9" />
+    <node id="V24" />
+    <node id="V25" />
+    <edge source="V30" target="V20">
+      <data key="d0">0.3679832568992739</data>
+    </edge>
+    <edge source="V30" target="V37">
+      <data key="d0">0.07609344652733963</data>
+    </edge>
+    <edge source="V30" target="V9">
+      <data key="d0">0.04025771136619982</data>
+    </edge>
+    <edge source="V30" target="V24">
+      <data key="d0">0.0375533984412284</data>
+    </edge>
+    <edge source="V30" target="V25">
+      <data key="d0">0.03914085540420831</data>
+    </edge>
+    <edge source="V20" target="V37">
+      <data key="d0">0.1753678294308969</data>
+    </edge>
+    <edge source="V20" target="V9">
+      <data key="d0">0.38645206253480413</data>
+    </edge>
+    <edge source="V20" target="V24">
+      <data key="d0">0.3425286731078775</data>
+    </edge>
+    <edge source="V20" target="V25">
+      <data key="d0">0.29696460975020267</data>
+    </edge>
+    <edge source="V37" target="V9">
+      <data key="d0">0.0877706955413905</data>
+    </edge>
+    <edge source="V37" target="V24">
+      <data key="d0">0.07755313784125195</data>
+    </edge>
+    <edge source="V37" target="V25">
+      <data key="d0">0.072753710836296</data>
+    </edge>
+    <edge source="V9" target="V24">
+      <data key="d0">0.040673280748629415</data>
+    </edge>
+    <edge source="V9" target="V25">
+      <data key="d0">0.050606610062640556</data>
+    </edge>
+    <edge source="V24" target="V25">
+      <data key="d0">0.04564700773009267</data>
+    </edge>
+  </graph>
+</graphml>
