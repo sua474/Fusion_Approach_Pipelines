@@ -92,8 +92,9 @@ def traverse_directory(traversal_path,algo_names):
                         
                         stats = perform_comparision(file_path_1,file_path_2)
                         record_results(algo_names[i],algo_names[j],folder,stats)
-                        
-        
+
+
+      
                         
 if __name__== "__main__":
 
@@ -106,6 +107,4 @@ if __name__== "__main__":
     run_statistics = pd.DataFrame(columns=['Algo_1','Algo_2','Folder','Matched_Nonzero','Matched_Zero','Unmatched'])
     ################################## Function Calls ########################################
     traverse_directory(traversal_path,algo_names)
-    print(run_statistics)
-    run_statistics.to_csv('output.csv')
  
