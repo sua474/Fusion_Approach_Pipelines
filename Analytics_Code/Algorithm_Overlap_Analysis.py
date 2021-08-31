@@ -5,6 +5,9 @@ from itertools import *
 import pandas as pd
 import copy as c
 
+def read_file(location):
+	return c.copy(pd.read_csv(location))
+
 def power_set(iterable):
     s = list(iterable)
     return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
@@ -13,7 +16,7 @@ def generate_power_set(algo_names):
 
 	comparators = []
 	for group in power_set(algo_names):
-		if(len(group)>=2):
+		if(len(group)>=1):
 			comparators.append(group)
 
 	return comparators
@@ -63,8 +66,8 @@ def compute_overlap(algo_pair):
 
 	print('Comparing Algorithms {} and {}'.format(algo_1,algo_2))
 
-	algo_1_file = pd.read_csv(file_location+algo_1+".csv")
-	algo_2_file = pd.read_csv(file_location+algo_2+".csv")
+	algo_1_file = read_file(file_location+algo_1+".csv")
+	algo_2_file = read_file(file_location+algo_2+".csv")
 	
 	overlap_df = overlap(algo_1_file,algo_2_file,algo_1,algo_2)
 
@@ -73,19 +76,21 @@ def compute_overlap(algo_pair):
 		
 		print('Comparing Overlap and {}'.format(algo_3))
 
-		algo_3_file = pd.read_csv(file_location+algo_3+".csv")
+		algo_3_file = read_file(file_location+algo_3+".csv")
 		overlap_df = overlap(overlap_df,algo_3_file,'overlap',algo_3)
 
 	return overlap_df
 
-def count_match_vs_mismatch(overlap_df):
+def count_match_vs_mismatch(overlap_df_x,overlap_df_y):
 
 	match_count = 0
 	mismatch_count = 0
 
-	for i in range(0,overlap_df.shape[0]):
-		for j in range(0,overlap_df.shape[1]):
-			if(overlap_df.iloc[i,j]==1):
+	validate_df(overlap_df_x,overlap_df_y,"DF X","DF Y")
+
+	for i in range(0,overlap_df_x.shape[0]):
+		for j in range(0,overlap_df_x.shape[1]):
+			if(overlap_df_x.iloc[i,j]== overlap_df_y.iloc[i,j]):
 				match_count+=1
 			else:
 				mismatch_count+=1
@@ -94,19 +99,31 @@ def count_match_vs_mismatch(overlap_df):
 
 def generate_statistics(sets):
 	
+	global file_location
+	sets_copy = c.copy(sets)
 	overlap_statistics = []
 
-	for pair in sets:
-		pair_list = list(pair)
-		overlap_df = compute_overlap(list(pair))
-		match,mismatch = count_match_vs_mismatch(overlap_df)
-		overlap_statistics.append([pair_list[0],pair_list[1],match,mismatch])
+	overlap_df_x = pd.DataFrame()
+	overlap_df_y = pd.DataFrame()
+
+	for x in sets:
+		if( len(list(x))>1 ):
+			overlap_df_x = compute_overlap(list(x))
+		else:
+			overlap_df_x = read_file(file_location+list(x)[0]+".csv")
+
+		for y in sets_copy:
+			print('Comparing {} with {}'.format(list(x),list(y)))
+			if( len(list(y))>1 ):
+				overlap_df_y = compute_overlap(list(y))
+			else:
+				overlap_df_y = read_file(file_location+list(y)[0]+".csv")
+			
+			match,mismatch = count_match_vs_mismatch(overlap_df_x,overlap_df_y)
+
+			overlap_statistics.append([list(x),list(y),[match,mismatch]])
 
 	return overlap_statistics
-
-def plot_statistics(overlap_statistics,algo_names):
-	return 0
-
 
 if __name__=='__main__':
 
@@ -114,4 +131,4 @@ if __name__=='__main__':
 	algo_names = ['Spiec_Easi_10', 'Spring_10']
 	sets = generate_power_set(algo_names)
 	overlap_statistics = generate_statistics(sets)
-	print(overlap_statistics,algo_names)
+	print(overlap_statistics)
