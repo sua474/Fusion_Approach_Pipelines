@@ -125,10 +125,31 @@ def generate_statistics(sets):
 
 	return overlap_statistics
 
+def get_string_alias(list):
+
+	str_rep=""
+
+	for val in list:
+		str_rep = (str_rep+' '+val).strip()
+
+	return str_rep
+
+
+def generate_confusion_matrix(overlap_statistics):
+	
+	vals = list(dict.fromkeys( [get_string_alias(x[0]) for x in overlap_statistics] ))
+	confusion_matrix = pd.DataFrame(index = vals, columns=vals)
+
+	for x in overlap_statistics:
+		confusion_matrix.loc[ get_string_alias(x[0]), get_string_alias(x[1]) ] = x[2][0]
+
+	print(confusion_matrix)
+	# print(overlap_statistics)
+
 if __name__=='__main__':
 
 	file_location = "Aggregated_Files/"
 	algo_names = ['Spiec_Easi_10', 'Spring_10']
 	sets = generate_power_set(algo_names)
 	overlap_statistics = generate_statistics(sets)
-	print(overlap_statistics)
+	generate_confusion_matrix(overlap_statistics)
