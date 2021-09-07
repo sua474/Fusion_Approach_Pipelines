@@ -1,9 +1,10 @@
 import matplotlib.pyplot as plt
 from matplotlib_venn import venn3
-
+import seaborn as sns
 from itertools import *
 import pandas as pd
 import copy as c
+import numpy as np
 
 def read_file(location):
 	return c.copy(pd.read_csv(location))
@@ -95,7 +96,7 @@ def count_match_vs_mismatch(overlap_df_x,overlap_df_y):
 			else:
 				mismatch_count+=1
 
-	return match_count,mismatch_count
+	return (match_count/(match_count+mismatch_count)*100),(mismatch_count/(match_count+mismatch_count)*100)
 
 def generate_statistics(sets):
 	
@@ -113,7 +114,7 @@ def generate_statistics(sets):
 			overlap_df_x = read_file(file_location+list(x)[0]+".csv")
 
 		for y in sets_copy:
-			print('Comparing {} with {}'.format(list(x),list(y)))
+			#print('Comparing {} with {}'.format(list(x),list(y)))
 			if( len(list(y))>1 ):
 				overlap_df_y = compute_overlap(list(y))
 			else:
@@ -130,7 +131,7 @@ def get_string_alias(list):
 	str_rep=""
 
 	for val in list:
-		str_rep = (str_rep+' '+val).strip()
+		str_rep = (str_rep+" "+val).strip()
 
 	return str_rep
 
@@ -141,15 +142,34 @@ def generate_confusion_matrix(overlap_statistics):
 	confusion_matrix = pd.DataFrame(index = vals, columns=vals)
 
 	for x in overlap_statistics:
-		confusion_matrix.loc[ get_string_alias(x[0]), get_string_alias(x[1]) ] = x[2][0]
+		confusion_matrix.loc[get_string_alias(x[0]), get_string_alias(x[1]) ] = x[2][0]
 
-	print(confusion_matrix)
-	# print(overlap_statistics)
+	return (confusion_matrix.astype('float'))
+
+def plot_confusion_matrix(confusion_matrix):
+	
+	plt.figure()
+	#confusion_matrix.to_csv('Confusion_Matrxi.csv')
+	mask = np.zeros_like(confusion_matrix)
+	mask[np.tril_indices_from(mask)] = True
+	sns.heatmap(confusion_matrix, annot=True, fmt=".2f",mask=mask)
+	plt.show()
+
 
 if __name__=='__main__':
 
+	##################### Input variables #################
 	file_location = "Aggregated_Files/"
 	algo_names = ['Spiec_Easi_10', 'Spring_10']
+
+	#################### Generate Power Sets or combinations of algorithms to be matched ###############
 	sets = generate_power_set(algo_names)
+
+	##################### Performs pairwise algorithm matching ##########################################
 	overlap_statistics = generate_statistics(sets)
-	generate_confusion_matrix(overlap_statistics)
+
+	##################### Generate a cofusion matrix ####################################################
+	confusion_matrix = generate_confusion_matrix(overlap_statistics)
+
+	##################### Plot the Confusion Matrix ####################################################
+	plot_confusion_matrix(confusion_matrix)
