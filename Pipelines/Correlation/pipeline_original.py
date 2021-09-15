@@ -534,7 +534,7 @@ def create_pca_plot(features):
     plt.ylabel('Principle Component 2')
     plt.title('Scatter Plot of Principle Components 1 and 2')
     plt.tight_layout()
-    plt.savefig(os.path.join(outdir,"pca_scatter.png"))
+    #plt.savefig(os.path.join(outdir,"pca_scatter.png"))
     #plt.show()
 
 def plot_graph_centrality(features, cond_type, corr_type, corr_dir, keep_thresh, weighted):
@@ -569,27 +569,35 @@ def plot_graph_centrality(features, cond_type, corr_type, corr_dir, keep_thresh,
     networkx.write_graphml(df_g, outdir+'/graph_network.graphml')
     networkx.draw(df_g, node_color='dodgerblue',edge_color='dimgrey', with_labels=True)
 
-    plt.savefig(os.path.join(outdir,"graph_network.png"))
+    #plt.savefig(os.path.join(outdir,"graph_network.png"))
     create_ecological_network(df_b.copy(),data.copy())
     #plt.show()
 
 def create_ecological_network(df,data):
-    feature_names = data.columns
+    global infile1_path
+    orig_dataset = pd.read_csv(infile1_path, index_col=False)
+
+    feature_names = orig_dataset.columns
     metric_matrix = pd.DataFrame(columns = feature_names, index=feature_names,dtype='float64')
     metric_matrix.fillna(value=0.0, inplace=True)
     
+    # print('Total Features: {} '.format(feature_names))
+    # print('Correlated Features: {} '.format(data.columns))
+    #   print(df)
+    
+
     for i in df.index:
         row = df.loc[i].tolist()
         metric_matrix.loc[row[0]][row[1]] = row[2]
         #print("Rows:0 "+str(row[0])+" Row:1 "+str(row[1])+" Row:2 "+str(row[2])+" Set Value: "+str(metric_matrix[row[0]][row[1]]))
     
-    metric_matrix.to_csv(os.path.join(outdir,"Metric Network.csv"))
+    metric_matrix.to_csv(os.path.join(outdir,"Metric Network.csv"),index=False)
         
     plt.figure()
     plt.title("Feature Metric Heatmap")
     plt.tight_layout()
     sb.heatmap(metric_matrix,annot=True, cmap=['Grey','Blue'],cbar=False)
-    plt.savefig(fname=os.path.join(outdir,"Metrics Network.png"),format='png',dpi=600,bbox_inches='tight',papertype='ledger')
+    #plt.savefig(fname=os.path.join(outdir,"Metrics Network.png"),format='png',dpi=600,bbox_inches='tight',papertype='ledger')
     
 
 def plot_feature_metric(features):
@@ -602,7 +610,7 @@ def plot_feature_metric(features):
     plt.ylabel('Metric Value')
     plt.title('Metric Value Per Feature')
     plt.tight_layout()
-    plt.savefig(os.path.join(outdir,"metric_value.png"))
+    #plt.savefig(os.path.join(outdir,"metric_value.png"))
     #plt.show()
 
 def name_imp_features(feature_df, filename):
@@ -714,7 +722,7 @@ def main(ab_comp, infile1, infile2, metric_name, c_type, min_count,
          weighted, corr_prop, evaluation_type, plot_metric,
          create_graph, plot_pca, naming_file, proc_id, min_connected,result_dir):
 
-
+    global infile1_path
     t_start = time.perf_counter()
 
     infile1_path = infile1
@@ -736,7 +744,8 @@ def main(ab_comp, infile1, infile2, metric_name, c_type, min_count,
     process_id = proc_id
 
     global outdir
-    outdir = result_dir+infile1_path.split('/')[-1].split('.')[0]+'/' +metric_name +'_' + correlation +'_' + str(keep_threshold) +'_'+ centrality_type
+    outdir = result_dir
+    #outdir = result_dir+infile1_path.split('/')[-1].split('.')[0]+'/' +metric_name +'_' + correlation +'_' + str(keep_threshold) +'_'+ centrality_type
     os.makedirs(outdir, exist_ok=True)
 
     global connectedness

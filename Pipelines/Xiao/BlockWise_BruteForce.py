@@ -430,7 +430,7 @@ def create_interaction_network(jaccobian,vote_iteration,result_dir):
             jaccobian_matrix.loc[feature_names[counter]] = row[0]
         counter+=1
     
-    jaccobian_matrix.to_csv(result_dir+"Sign of Jaccobian for Iteration_"+str(vote_iteration)+".csv")
+    jaccobian_matrix.to_csv(result_dir+"Sign of Jaccobian for Iteration_"+str(vote_iteration)+".csv",index=False)
     # plt.figure(figsize=(5,5))
     # plt.title("Sign of Jaccobian for Iteration: "+str(vote_iteration))
     # sb.heatmap(jaccobian_matrix,annot=True, cmap=['Blue','Grey','Red'],center=0,cbar=False)
@@ -543,7 +543,7 @@ if __name__ == "__main__":
 ############################### Execution Parameters #######################################################################
     block_indxes = [10] #maximum number of brute force iteration
     #result_dir = 'result/test_bw/' #result directory
-    discard_threhold = 5.0 #set hyperplane values to 0 if less than +- discard_threshold
+    discard_threhold = 0.1 #set hyperplane values to 0 if less than +- discard_threshold
     voting_type = 'max'
 ############################################################################################################################
 

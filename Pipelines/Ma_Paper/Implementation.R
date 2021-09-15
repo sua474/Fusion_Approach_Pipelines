@@ -21,8 +21,8 @@ dataset <- t(t(dataset))
 
 mclr_dataset <- mclr(dataset)
 
-pcorr <- cggm.pcorr(mclr_dataset,c(1.5,0.4,0.3),'glasso')
+pcorr <- cggm.pcorr(mclr_dataset,c(1.5),'glasso')
 adjacency_matrix <- as.data.frame(pcorr$icov)   #Extracts the Adjacency Matrix
 
 #Writes Output to the file
-write.csv(adjacency_matrix,paste0(args[2],"Adjacency_Matrix_",get_file_name(args[1]),".csv"),row.names = FALSE) 
+write.csv(adjacency_matrix,paste0(args[2],"Adjacency_Matrix.csv"),row.names = FALSE) 

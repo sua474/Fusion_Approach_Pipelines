@@ -22,4 +22,4 @@ se <- spiec.easi(dataset, method='mb', lambda.min.ratio=1e-2, nlambda=15, pulsar
 adjacency_matrix = as.data.frame(as.matrix(getRefit(se)))
 ##################################################################################
 dir.create(args[2])
-write.csv(adjacency_matrix,paste0(args[2],"Adjacency_Matrix_",get_file_name(args[1]),".csv"),row.names = FALSE)
+write.csv(adjacency_matrix,paste0(args[2],"Adjacency_Matrix.csv"),row.names = FALSE)

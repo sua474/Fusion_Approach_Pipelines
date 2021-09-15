@@ -2,7 +2,9 @@ library(SPRING)
 library(stringr)
 
 args = commandArgs(trailingOnly=TRUE)
+print(args[2])
 dir.create(args[2])                 #Creates the output dir
+
 
 get_file_name<-function(path_to_dir)
 {
@@ -28,5 +30,5 @@ pcor.K <- as.matrix(SpiecEasi::symBeta(fit.spring$output$est$beta[[opt.K]], mode
 adjacency_matrix <- as.data.frame(pcor.K)
 
 #Writes Output to the file
-write.csv(adjacency_matrix,paste0(args[2],"Adjacency_Matrix_",get_file_name(args[1]),".csv"),row.names = FALSE) 
+write.csv(adjacency_matrix,paste0(args[2],"Adjacency_Matrix.csv"),row.names = FALSE) 
 
