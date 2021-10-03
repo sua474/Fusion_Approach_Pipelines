@@ -1,6 +1,7 @@
 import pandas as pd 
 import os
 from File_Reader import file_reader
+from File_Writer import file_writer
 from Perform_Matching import perform_matching
 
 class compute_analytics:
@@ -60,10 +61,7 @@ class compute_analytics:
             
             matches = matcher.compute_overlap(pay_load,self.ground_truth[ground_truth_file_name])
             matches['File'] = int(index)
-            print(matches)
             self.analytics_df.loc[len(self.analytics_df)] = list(matches.values())
-                
-        return self.analytics_df
     
     def check_validity(self):
         
@@ -86,12 +84,14 @@ if __name__ == '__main__':
     algorithms = ['Spiec_Easi','Xiao','Ma_Paper','Correlation','Spring']
     output_filename = set(['Adjacency_Matrix.csv','Sign of Jaccobian for Iteration_0.csv','Metric Network.csv'])
     ground_truth_path = "/u2/sua474/Dataset/Chiquet/Taxa_10/Ground_Truth_10/"
-
+    
     analytics = compute_analytics(algorithms,base_path,output_filename,ground_truth_path)
     analytics.load_input_file_objects()
     analytics.load_ground_truth_objects()
-    df = analytics.get_analytics()
-    df.to_csv("Output.csv",index=False)
+    analytics.get_analytics()
+    
+    file_writer = file_writer(analytics.analytics_df.copy())
+    file_writer.write_csv("test_output.csv")
     #analytics.check_validity()
 
     
