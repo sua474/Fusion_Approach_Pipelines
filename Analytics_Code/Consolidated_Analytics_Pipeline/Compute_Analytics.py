@@ -8,11 +8,11 @@ from Record_Keeper import record_keeper
 
 class compute_analytics:
 
-    def __init__ (self,algorithms,base_folder,output_filename,ground_truth_path):
+    def __init__ (self,algorithms,base_folder,allowed_filenames,ground_truth_path):
 
         self.algorithms = algorithms.copy()
         self.base_folder = base_folder
-        self.output_filename = output_filename.copy()
+        self.allowed_filenames = output_filename.copy()
         self.data_files = dict.fromkeys(algorithms)
         self.ground_truth_path = ground_truth_path
         self.ground_truth = dict()
@@ -27,9 +27,13 @@ class compute_analytics:
         for algorithm in self.algorithms:
             location = self.base_folder +'/'+ algorithm
             for root, directories, files in os.walk(location):
+                file_found = False
                 for file in files:
-                    if(file in self.output_filename):
+                    if(file in self.allowed_filenames):
+                        file_found = True
                         self.data_files[algorithm].append(file_reader(root,file,algorithm))
+                if(not file_found):
+                    self.data_files[algorithm].append(file_reader(root,"Missing_File",algorithm))
     
     def load_ground_truth_objects(self):
         
@@ -41,7 +45,6 @@ class compute_analytics:
         
         ref_obj = pay_load.pop()
         reference = ref_obj.file_location.split('/')[-1].split('_')[-1]
-        
         for obj in pay_load:
             index = obj.file_location.split('/')[-1].split('_')[-1]
             if(index!=reference):
@@ -95,12 +98,12 @@ if __name__ == '__main__':
     record_keeper = record_keeper(algorithms) # Object Initialization
     
     for taxa in ["Taxa_10"]:
-        for internal_threshold in ["10","50"]:
+        for internal_threshold in ["10","50","100"]:
             print("Executing Taxa {} and Internal Threshold {}".format(taxa,internal_threshold))
         ######### Input Parameters #####################
             base_path = "/u2/sua474/Fusion_Approach_Pipelines/Output/{}/IT_{}".format(taxa,internal_threshold)
             ground_truth_path = "/u2/sua474/Dataset/Chiquet/{}/Ground_Truth_{}/".format(taxa,internal_threshold)
-            result_path = "/u2/sua474/Fusion_Approach_Analytics/Output/Baseline_Result/{}_IT_{}.csv".format(taxa,internal_threshold)
+            #result_path = "/u2/sua474/Fusion_Approach_Analytics/Output/Baseline_Result/{}_IT_{}.csv".format(taxa,internal_threshold)
         ################################################
     
         ######## Object Initialization ####################
@@ -110,11 +113,10 @@ if __name__ == '__main__':
             analytics.load_ground_truth_objects()
             analytics.compute_analytics()
             analytics.compute_aggregate()
-            record_keeper.add_record(analytics.aggregated_output)
+            record_keeper.add_record(analytics.aggregated_output,taxa,internal_threshold)
     
     print(record_keeper.aggregated_records)
-    
-    #file_writer = file_writer(analytics.analytics_df.copy())
-    #file_writer.write_csv(result_path)
+    file_writer = file_writer()
+    file_writer.write_csv("/u2/sua474/Fusion_Approach_Analytics/Output/Baseline_Result/Aggregate.csv",record_keeper.aggregated_records)
 
     

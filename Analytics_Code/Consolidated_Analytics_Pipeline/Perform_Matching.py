@@ -28,7 +28,9 @@ class perform_matching:
         
         for algorithm in algorithms:
             algorithm_df = algorithm.get_file()
-            if(self.dimensionality_check(algorithm_df,ground_truth_df)):
+            if(isinstance(algorithm_df,bool)):
+                output[algorithm.algorithm_name] = 0
+            elif(self.dimensionality_check(algorithm_df,ground_truth_df)):
                 match_percentage = self.compute_exact_match(algorithm_df,ground_truth_df)
                 output[algorithm.algorithm_name] = match_percentage
             else:
