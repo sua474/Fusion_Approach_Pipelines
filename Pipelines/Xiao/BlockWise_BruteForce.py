@@ -206,7 +206,7 @@ def reduced_pair_difference(pair_difference):
             column_dicitionary[key]+= 1
         else:
             column_dicitionary[key] = 1
-
+    
     first = True
     for x in column_dicitionary.keys():
         l1 = np.array(list(map(float,x.split(","))))
@@ -217,6 +217,7 @@ def reduced_pair_difference(pair_difference):
             first = False
         else:
             new_matrix = np.insert(new_matrix,new_matrix.shape[1],l1,axis=1)
+    
     
     return new_matrix,common_count
 
@@ -451,13 +452,15 @@ def sign_of_jaccobian(block_length,seed_patterns,voting_type,taxon):
     seed = []
     pair_difference = pd.DataFrame()
     pair_difference = sample_pair_difference_unordered(get_samples_for_taxon(taxon,block_length))
-    np_pd,factor_list = reduced_pair_difference(pair_difference)
+    
+    if(len(pair_difference.columns)>=1):
+        np_pd,factor_list = reduced_pair_difference(pair_difference)
     if(len(seed_patterns)>0):
         seed = seed_patterns[taxon][0].tolist()
         #print("Unwrapped Seed: "+str(seed)+" For Taxon: "+str(taxon)+" Type: "+str(type(seed)))
     
     added_block_length = block_length - len(seed)
-    print("Added Block Length: "+str(added_block_length)+" For Taxon: "+str(taxon))
+    #print("Added Block Length: "+str(added_block_length)+" For Taxon: "+str(taxon))
     
     global no_of_features
     selected_hyperplanes = []
