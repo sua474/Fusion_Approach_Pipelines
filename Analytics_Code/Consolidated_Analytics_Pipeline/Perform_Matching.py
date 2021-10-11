@@ -33,6 +33,7 @@ class perform_matching:
                 output[algorithm.algorithm_name] = match_percentage
             else:
                 print('The Algorithm {} and Ground Truth Do not have the same dimensions'.format(algorithm.algorithm_name))
+                output[algorithm.algorithm_name] = 0
                 
         return output.copy()
                 

@@ -1,4 +1,6 @@
 import pandas as pd
+import sys
+import os
 
 class file_reader:
 
@@ -17,9 +19,13 @@ class file_reader:
     def get_file(self):
         
         loading_path = self.file_location+'/'+self.file_name
-        df = pd.read_csv(loading_path)
-        df = self.normalize_df(df.copy())
-        return df
+        if(os.path.isfile(loading_path)):
+            df = pd.read_csv(loading_path)
+            df = self.normalize_df(df.copy())
+            return df
+        else:
+            print('File Path: {} Donot Exist'.format(loading_path))
+            
 
     def get_simulated_dataset_name(self):
         

@@ -1,8 +1,10 @@
 import pandas as pd 
 import os
+import sys
 from File_Reader import file_reader
 from File_Writer import file_writer
 from Perform_Matching import perform_matching
+from Record_Keeper import record_keeper
 
 class compute_analytics:
 
@@ -14,7 +16,8 @@ class compute_analytics:
         self.data_files = dict.fromkeys(algorithms)
         self.ground_truth_path = ground_truth_path
         self.ground_truth = dict()
-        self.analytics_df = pd.DataFrame(columns = algorithms+['File'])
+        self.analytics_df = pd.DataFrame(columns = algorithms+['Data_File_Index'])
+        self.aggregated_output = []
         
         for algorithm in self.algorithms:
             self.data_files[algorithm] = list()
@@ -42,26 +45,33 @@ class compute_analytics:
         for obj in pay_load:
             index = obj.file_location.split('/')[-1].split('_')[-1]
             if(index!=reference):
-                return False
+                sys.exit("Files Do Not Belong to the Same Ecological Dataset")
         
         return reference
             
-    def get_analytics(self):
+    def compute_analytics(self):
         
         matcher = perform_matching()
 
         for i in range(0, len(self.ground_truth)):
             pay_load = []
             for algorithm in self.algorithms:
-                pay_load.append(self.data_files[algorithm].pop())
+                if(len(self.data_files[algorithm])>=1):
+                    pay_load.append(self.data_files[algorithm].pop())
             
             index = self.validate_payload(pay_load.copy())
             ground_truth_file_name = 'Ground_Truth_{}.csv'.format(index)
             print('Processing {}'.format(ground_truth_file_name))
             
             matches = matcher.compute_overlap(pay_load,self.ground_truth[ground_truth_file_name])
-            matches['File'] = int(index)
+            matches['Data_File_Index'] = int(index)
             self.analytics_df.loc[len(self.analytics_df)] = list(matches.values())
+    
+    def compute_aggregate(self):
+
+        for algorithm in self.algorithms:
+            self.aggregated_output.append(self.analytics_df[algorithm].mean()) # Computing average of each column of df
+        
     
     def check_validity(self):
         
@@ -79,19 +89,32 @@ class compute_analytics:
           
     
 if __name__ == '__main__':
-    
-    base_path = "/u2/sua474/Fusion_Approach_Pipelines/Output/Taxa_10/IT_10"
+        
     algorithms = ['Spiec_Easi','Xiao','Ma_Paper','Correlation','Spring']
     output_filename = set(['Adjacency_Matrix.csv','Sign of Jaccobian for Iteration_0.csv','Metric Network.csv'])
-    ground_truth_path = "/u2/sua474/Dataset/Chiquet/Taxa_10/Ground_Truth_10/"
+    record_keeper = record_keeper(algorithms) # Object Initialization
     
-    analytics = compute_analytics(algorithms,base_path,output_filename,ground_truth_path)
-    analytics.load_input_file_objects()
-    analytics.load_ground_truth_objects()
-    analytics.get_analytics()
+    for taxa in ["Taxa_10"]:
+        for internal_threshold in ["10","50"]:
+            print("Executing Taxa {} and Internal Threshold {}".format(taxa,internal_threshold))
+        ######### Input Parameters #####################
+            base_path = "/u2/sua474/Fusion_Approach_Pipelines/Output/{}/IT_{}".format(taxa,internal_threshold)
+            ground_truth_path = "/u2/sua474/Dataset/Chiquet/{}/Ground_Truth_{}/".format(taxa,internal_threshold)
+            result_path = "/u2/sua474/Fusion_Approach_Analytics/Output/Baseline_Result/{}_IT_{}.csv".format(taxa,internal_threshold)
+        ################################################
     
-    file_writer = file_writer(analytics.analytics_df.copy())
-    file_writer.write_csv("test_output.csv")
-    #analytics.check_validity()
+        ######## Object Initialization ####################
+            analytics = compute_analytics(algorithms,base_path,output_filename,ground_truth_path)
+        ######### Start Analytics #########################
+            analytics.load_input_file_objects()
+            analytics.load_ground_truth_objects()
+            analytics.compute_analytics()
+            analytics.compute_aggregate()
+            record_keeper.add_record(analytics.aggregated_output)
+    
+    print(record_keeper.aggregated_records)
+    
+    #file_writer = file_writer(analytics.analytics_df.copy())
+    #file_writer.write_csv(result_path)
 
     
