@@ -97,7 +97,7 @@ if __name__ == '__main__':
     output_filename = set(['Adjacency_Matrix.csv','Sign of Jaccobian for Iteration_0.csv','Metric Network.csv'])
     record_keeper = record_keeper(algorithms) # Object Initialization
     
-    for taxa in ["Taxa_10"]:
+    for taxa in ["Taxa_10","Taxa_50","Taxa_100"]:
         for internal_threshold in ["10","50","100"]:
             print("Executing Taxa {} and Internal Threshold {}".format(taxa,internal_threshold))
         ######### Input Parameters #####################
@@ -115,7 +115,7 @@ if __name__ == '__main__':
             analytics.compute_aggregate()
             record_keeper.add_record(analytics.aggregated_output,taxa,internal_threshold)
     
-    print(record_keeper.aggregated_records)
+    print(record_keeper.get_top_performing_algorithms(3))
     file_writer = file_writer()
     file_writer.write_csv("/u2/sua474/Fusion_Approach_Analytics/Output/Baseline_Result/Aggregate.csv",record_keeper.aggregated_records)
 
