@@ -4,11 +4,15 @@ import pandas as pd
 class record_keeper:
 
     def __init__(self,algorithms):
-        self.aggregated_records = pd.DataFrame(columns=algorithms+["Taxa","Internal Threshold"])
+        self.aggregated_records = pd.DataFrame(columns=['Algorithm','Accuracy','TPR','TNR','FPR','FNR']+["Taxa","Internal_Threshold"])
 
 
-    def add_record(self,record_list,taxa,internal_threshold):
-        self.aggregated_records.loc[len(self.aggregated_records)] = record_list + [taxa] + [internal_threshold]
+    def add_record(self,aggregated_df,taxa,internal_threshold):
+        
+        aggregated_df['Taxa'] = taxa
+        aggregated_df['Internal_Threshold'] = internal_threshold
+
+        self.aggregated_records = self.aggregated_records.append(aggregated_df,ignore_index=True)
     
     def get_top_performing_algorithms(self,number_of_tops):
         #Takes average of each dataframe column and returns the top most algorithms

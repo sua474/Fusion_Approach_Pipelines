@@ -17,7 +17,7 @@ class compute_analytics:
         self.ground_truth_path = ground_truth_path
         self.ground_truth = dict()
         self.analytics_df = pd.DataFrame(columns = ['Algorithm','Accuracy','TPR','TNR','FPR','FNR','Data_File_Index'] )
-        self.aggregated_output = []
+        self.aggregated_analytics = pd.DataFrame(columns = ['Algorithm','Accuracy','TPR','TNR','FPR','FNR'])
         
         for algorithm in self.algorithms:
             self.data_files[algorithm] = list()
@@ -74,8 +74,10 @@ class compute_analytics:
     def compute_aggregate(self):
 
         for algorithm in self.algorithms:
-            self.aggregated_output.append(self.analytics_df[algorithm].mean()) # Computing average of each column of df
-        
+            algorithm_df = self.analytics_df.loc[self.analytics_df['Algorithm'] == algorithm]
+            mean_dict = algorithm_df[['Accuracy','TPR','TNR','FPR','FNR']].mean()
+            self.aggregated_analytics.loc[len(self.aggregated_analytics)] = [algorithm] + list(mean_dict.values)
+
     
     def check_validity(self):
         
@@ -99,12 +101,11 @@ if __name__ == '__main__':
     record_keeper = record_keeper(algorithms) # Object Initialization
     
     for taxa in ["Taxa_10"]:
-        for internal_threshold in ["10"]:
+        for internal_threshold in ["10","50","100"]:
             print("Executing Taxa {} and Internal Threshold {}".format(taxa,internal_threshold))
         ######### Input Parameters #####################
             base_path = "/u2/sua474/Fusion_Approach_Pipelines/Output/{}/IT_{}".format(taxa,internal_threshold)
             ground_truth_path = "/u2/sua474/Dataset/Chiquet/{}/Ground_Truth_{}/".format(taxa,internal_threshold)
-            #result_path = "/u2/sua474/Fusion_Approach_Analytics/Output/Baseline_Result/{}_IT_{}.csv".format(taxa,internal_threshold)
         ################################################
     
         ######## Object Initialization ####################
@@ -113,10 +114,12 @@ if __name__ == '__main__':
             analytics.load_input_file_objects()
             analytics.load_ground_truth_objects()
             analytics.compute_analytics()
-            #analytics.compute_aggregate()
-            #record_keeper.add_record(analytics.aggregated_output,taxa,internal_threshold)
-            file_writer = file_writer()
-            file_writer.write_csv("/u2/sua474/Fusion_Approach_Analytics/Output/Baseline_Result/Aggregate.csv",analytics.analytics_df)
+            analytics.compute_aggregate()
+            record_keeper.add_record(analytics.aggregated_analytics.copy(),taxa,internal_threshold)
+            print(record_keeper.aggregated_records)
+            
+    file_writer = file_writer()
+    file_writer.write_csv("/u2/sua474/Fusion_Approach_Analytics/Output/Baseline_Result/Aggregate.csv",record_keeper.aggregated_records)
     
     #print(record_keeper.get_top_performing_algorithms(3))
     #file_writer = file_writer()
