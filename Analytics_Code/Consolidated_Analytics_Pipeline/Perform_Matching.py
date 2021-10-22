@@ -1,5 +1,4 @@
 import pandas as pd
-from File_Reader import file_reader
 
 class perform_matching:
     
@@ -9,18 +8,31 @@ class perform_matching:
             return True
         else:
             return False
-    
-    def compute_exact_match(self,algorithm_df,ground_truth_df):
-    
-        matches = 0
-        total = algorithm_df.shape[0] * algorithm_df.shape[1]
+
+    def compute_match_statistics(self,algorithm_df,ground_truth_df):
+
+        tp,tn,fp,fn = 0,0,0,0
+
         for i in range(0, algorithm_df.shape[0]):
             for j in range(0, algorithm_df.shape[1]):
-                if(algorithm_df.iloc[i,j] == ground_truth_df.iloc[i,j]):
-                    matches+=1
+                if(algorithm_df.iloc[i,j] == 1 and ground_truth_df.iloc[i,j] == 1):
+                    tp+=1
+                elif(algorithm_df.iloc[i,j] == 1 and ground_truth_df.iloc[i,j] == 0):
+                    fp+=0
+                elif(algorithm_df.iloc[i,j] == 0 and ground_truth_df.iloc[i,j] == 0):
+                    tn+=1
+                elif(algorithm_df.iloc[i,j] == 0 and ground_truth_df.iloc[i,j] == 1):
+                    fn+=1
         
-        return round((matches/total)*100,3)
-    
+        tpr = round(tp/(tp+fn),3)
+        tnr = round(tn/(tn+fp),3)
+        fpr = round(fp/(fp+tn),3)
+        fnr = round(fn/(fn+tp),3)
+        acc = round( ((tp + tn) / (tp+tn+fp+fn)),3)
+
+        return [acc,tpr,tnr,fpr,fnr]
+
+
     def compute_overlap(self, algorithms,ground_truth):
         
         output = dict()
@@ -29,13 +41,14 @@ class perform_matching:
         for algorithm in algorithms:
             algorithm_df = algorithm.get_file()
             if(isinstance(algorithm_df,bool)):
-                output[algorithm.algorithm_name] = 0
+                output[algorithm.algorithm_name] = [0]*5 #multiplied by 5 to have equal number of zeros for each analytical value
+
             elif(self.dimensionality_check(algorithm_df,ground_truth_df)):
-                match_percentage = self.compute_exact_match(algorithm_df,ground_truth_df)
-                output[algorithm.algorithm_name] = match_percentage
+                output[algorithm.algorithm_name] = self.compute_match_statistics(algorithm_df,ground_truth_df)
+            
             else:
                 print('The Algorithm {} and Ground Truth Do not have the same dimensions'.format(algorithm.algorithm_name))
-                output[algorithm.algorithm_name] = 0
+                output[algorithm.algorithm_name] = [0]*5 #multiplied by 5 to have equal number of zeros for each analytical value
                 
         return output.copy()
                 
