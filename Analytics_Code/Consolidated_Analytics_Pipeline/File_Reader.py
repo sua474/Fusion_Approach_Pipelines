@@ -24,7 +24,7 @@ class file_reader:
             df = self.normalize_df(df.copy())
             return df
         else:
-            print('File Path: {} Do not Exist'.format(loading_path))
+            #print('File Path: {} Do not Exist'.format(loading_path))
             return False
 
     def get_simulated_dataset_name(self):
