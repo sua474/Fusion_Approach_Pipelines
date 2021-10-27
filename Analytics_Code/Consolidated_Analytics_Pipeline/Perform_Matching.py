@@ -24,7 +24,7 @@ class perform_matching:
                 elif(algorithm_df.iloc[i,j] == 0 and ground_truth_df.iloc[i,j] == 1):
                     fn+=1
         
-        penalty = round(fp+fn/(tp+tn+fp+fn),3) # Total wrong predictions
+        penalty = round( ((fp + fn) / (tp+tn+fp+fn)),3) # Total wrong predictions
         accuracy = round( ((tp + tn) / (tp+tn+fp+fn)),3) # Total Correct Predictions
 
         return [accuracy,penalty]
