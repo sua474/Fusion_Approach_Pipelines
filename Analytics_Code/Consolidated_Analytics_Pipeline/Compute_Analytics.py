@@ -8,16 +8,17 @@ from Record_Keeper import record_keeper
 
 class compute_analytics:
 
-    def __init__ (self,algorithms,base_folder,allowed_filenames,ground_truth_path):
+    def __init__ (self,algorithms,base_folder,allowed_filenames,ground_truth_path,analytical_features):
 
         self.algorithms = algorithms.copy()
+        self.analytical_features = analytical_features.copy()
         self.base_folder = base_folder
         self.allowed_filenames = allowed_filenames.copy()
         self.data_files = dict.fromkeys(algorithms)
         self.ground_truth_path = ground_truth_path
         self.ground_truth = dict()
-        self.analytics_df = pd.DataFrame(columns = ['Algorithm','Accuracy','TPR','TNR','FPR','FNR','Data_File_Index'] )
-        self.aggregated_analytics = pd.DataFrame(columns = ['Algorithm','Accuracy','TPR','TNR','FPR','FNR'])
+        self.analytics_df = pd.DataFrame(columns = analytical_features+['Data_File_Index'] )
+        self.aggregated_analytics = pd.DataFrame(columns = analytical_features)
         
         for algorithm in self.algorithms:
             self.data_files[algorithm] = list()
@@ -75,7 +76,7 @@ class compute_analytics:
 
         for algorithm in self.algorithms:
             algorithm_df = self.analytics_df.loc[self.analytics_df['Algorithm'] == algorithm]
-            mean_dict = algorithm_df[['Accuracy','TPR','TNR','FPR','FNR']].mean()
+            mean_dict = algorithm_df[self.analytical_features[1:]].mean()
             self.aggregated_analytics.loc[len(self.aggregated_analytics)] = [algorithm] + list(mean_dict.values)
 
     
@@ -98,9 +99,10 @@ if __name__ == '__main__':
         
     algorithms = ['Spiec_Easi','Xiao','Ma_Paper','Correlation','Spring']
     output_filename = set(['Adjacency_Matrix.csv','Sign of Jaccobian for Iteration_0.csv','Metric Network.csv'])
-    record_keeper = record_keeper(algorithms) # Object Initialization
+    analytical_features = ['Algorithm','Accuracy','Penalty']
+    record_keeper = record_keeper(algorithms,analytical_features) # Object Initialization
     
-    for taxa in ["Taxa_10","Taxa_30","Taxa_100"]:
+    for taxa in ["Taxa_10"]:
         for internal_threshold in ["10","50","100"]:
             print("Executing Taxa {} and Internal Threshold {}".format(taxa,internal_threshold))
         ######### Input Parameters #####################
@@ -109,7 +111,7 @@ if __name__ == '__main__':
         ################################################
     
         ######## Object Initialization ####################
-            analytics = compute_analytics(algorithms,base_path,output_filename,ground_truth_path)
+            analytics = compute_analytics(algorithms,base_path,output_filename,ground_truth_path,analytical_features)
         ######### Start Analytics #########################
             analytics.load_input_file_objects()
             analytics.load_ground_truth_objects()

@@ -3,8 +3,8 @@ import pandas as pd
 
 class record_keeper:
 
-    def __init__(self,algorithms):
-        self.aggregated_records = pd.DataFrame(columns=['Algorithm','Accuracy','TPR','TNR','FPR','FNR']+["Taxa","Internal_Threshold"])
+    def __init__(self,algorithms,analytical_features):
+        self.aggregated_records = pd.DataFrame(columns=analytical_features+["Taxa","Internal_Threshold"])
 
 
     def add_record(self,aggregated_df,taxa,internal_threshold):
@@ -20,10 +20,8 @@ class record_keeper:
         top_algos = {}
 
         for i in range(0,self.aggregated_records.shape[0]):
-            algorithm = self.aggregated_records.iloc[i,0]
-            correct = self.aggregated_records.iloc[i,1]*0.50 + self.aggregated_records.iloc[i,2]*0.25 + self.aggregated_records.iloc[i,3]*0.25
-            penalty = self.aggregated_records.iloc[i,4]*0.50 + self.aggregated_records.iloc[i,5]*0.50  
-            score = correct - penalty
+            algorithm = self.aggregated_records.iloc[i,0] 
+            score = self.aggregated_records.iloc[i,1] - self.aggregated_records.iloc[i,2]
             
             if(algorithm in result_dict and result_dict[algorithm] > score):
                 result_dict[algorithm] = score

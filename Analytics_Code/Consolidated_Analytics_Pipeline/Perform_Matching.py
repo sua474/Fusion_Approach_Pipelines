@@ -24,13 +24,10 @@ class perform_matching:
                 elif(algorithm_df.iloc[i,j] == 0 and ground_truth_df.iloc[i,j] == 1):
                     fn+=1
         
-        tpr = round(tp/(tp+fn),3)
-        tnr = round(tn/(tn+fp),3)
-        fpr = round(fp/(fp+tn),3)
-        fnr = round(fn/(fn+tp),3)
-        acc = round( ((tp + tn) / (tp+tn+fp+fn)),3)
+        penalty = round(fp+fn/(tp+tn+fp+fn),3) # Total wrong predictions
+        accuracy = round( ((tp + tn) / (tp+tn+fp+fn)),3) # Total Correct Predictions
 
-        return [acc,tpr,tnr,fpr,fnr]
+        return [accuracy,penalty]
 
 
     def compute_overlap(self, algorithms,ground_truth):
@@ -41,14 +38,14 @@ class perform_matching:
         for algorithm in algorithms:
             algorithm_df = algorithm.get_file()
             if(isinstance(algorithm_df,bool)):
-                output[algorithm.algorithm_name] = [0]*5 #multiplied by 5 to have equal number of zeros for each analytical value
+                output[algorithm.algorithm_name] = [0]*2 #multiplied by 5 to have equal number of zeros for each analytical value
 
             elif(self.dimensionality_check(algorithm_df,ground_truth_df)):
                 output[algorithm.algorithm_name] = self.compute_match_statistics(algorithm_df,ground_truth_df)
             
             else:
                 print('The Algorithm {} and Ground Truth Do not have the same dimensions'.format(algorithm.algorithm_name))
-                output[algorithm.algorithm_name] = [0]*5 #multiplied by 5 to have equal number of zeros for each analytical value
+                output[algorithm.algorithm_name] = [0]*2 #multiplied by 5 to have equal number of zeros for each analytical value
                 
         return output.copy()
                 
