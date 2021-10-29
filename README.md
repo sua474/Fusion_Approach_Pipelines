@@ -18,11 +18,16 @@ Each folder also contains a *script* folder that contains the .sh scripts of ece
 2.2) *-infile* refers to the location of the datafile that needs to be executed.<br/>
 2.3) *-outdir* refers to the location of the output directory where the program output file will be generated.<br/>
 
-## 3) Bulk Execution
+## 3) Bulk Execution of Pipelines
 3.1) Navigate to the pipeline folder and then to the algorithm you want to execute on an entire dataset. \
-3.2) Open the python file starting with name 'Execute_' <br/>
-3.3) Change the dataset path and output path carefully. Also, beware of the name change happeing inside the loop <br/>
-3.4) Execute the python script after editing
+3.2) Open the python file starting with name 'Execute_'. <br/>
+3.3) Change the dataset path and output path carefully. Also, beware of the name change happeing inside the loop. <br/>
+3.4) Execute the python script after editing.
 
 *Note:* The script folder contains the *.sh* scrpits for file execution. You can use that
-if you want 
+if you want.
+
+## 4) Execution of Consolidated_Analytics_Pipeline
+4.1) The pipeline executed through the main execution file named 'Compute_Analytics.py'. <br/>
+4.2) Set the parameters in the 'Compute_Analytics' file and execute it.<br/>
+4.3) This file with run and generate the consolidated analytics of the pipeline. <br/>
