@@ -14,4 +14,11 @@ an Implementation file, Installation_Steps file and Github file referring to the
 2.2) *-infile* refers to the location of the datafile that needs to be executed.<br/>
 2.3) *-outdir* refers to the location of the output directory where the program output file will be generated.<br/>
 
- 
+## 3) Bulk Execution
+3.1) Navigate to the pipeline folder and then to the algorithm you want to execute on an entire dataset. \
+3.2) Open the python file starting with name 'Execute_' <br/>
+3.3) Change the dataset path and output path carefully. Also, beware of the name change happeing inside the loop <br\>
+3.4) Execute the python script after editing
+
+*Note:* The script folder contains the *.sh* scrpits for file execution. You can use that
+if you want 
