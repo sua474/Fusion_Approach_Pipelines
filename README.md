@@ -1,7 +1,11 @@
 # Fusion_Approach_Pipelines
- This repo contains different implementations of microbial interaction network creation.
-Each folder contains the default implementation of a research paper. Each folder contains
-an Implementation file, Installation_Steps file and Github file referring to the source Github directory.<br/>
+ This repo contains different implementations (algorithms) of microbial interaction network creation. <br/>
+ 
+1) Each folder inside the *pipeline* folder contains the default implementation of a research paper. Each folder contains
+an Implementation file, Installation_Steps file, *Execute_* file and Github file referring to the source Github directory.<br/>
+Each folder also contains a *script* folder that contains the .sh scripts of ececution. <br/>
+2) The *Analytics_Code* folder contains the individual analytics methods written for data analytics <br/>
+3) Inside the *Analytics_Code* folder there is another folder named *Consolidated_Analytics_Pipeline*. This folder has the latest consolidated data analytics pipeline. <br/> 
 
 **Note: Xiao_and_Correlation pipeline is different than the rest as it requires many other parameters.** <br/>
 
@@ -17,7 +21,7 @@ an Implementation file, Installation_Steps file and Github file referring to the
 ## 3) Bulk Execution
 3.1) Navigate to the pipeline folder and then to the algorithm you want to execute on an entire dataset. \
 3.2) Open the python file starting with name 'Execute_' <br/>
-3.3) Change the dataset path and output path carefully. Also, beware of the name change happeing inside the loop <br\>
+3.3) Change the dataset path and output path carefully. Also, beware of the name change happeing inside the loop <br/>
 3.4) Execute the python script after editing
 
 *Note:* The script folder contains the *.sh* scrpits for file execution. You can use that
