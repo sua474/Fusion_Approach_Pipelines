@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="edge" attr.type="double" for="edge" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="V6" />
+    <node id="V43" />
+    <node id="V91" />
+    <node id="V79" />
+    <node id="V7" />
+    <node id="V70" />
+    <node id="V55" />
+    <edge source="V6" target="V43">
+      <data key="d0">0.03832670101505753</data>
+    </edge>
+    <edge source="V6" target="V91">
+      <data key="d0">0.05612019255146117</data>
+    </edge>
+    <edge source="V6" target="V79">
+      <data key="d0">2.6151143950325917e-07</data>
+    </edge>
+    <edge source="V6" target="V7">
+      <data key="d0">0.00012994235085617145</data>
+    </edge>
+    <edge source="V43" target="V91">
+      <data key="d0">0.11493713478922296</data>
+    </edge>
+    <edge source="V43" target="V79">
+      <data key="d0">0.03837652769318112</data>
+    </edge>
+    <edge source="V43" target="V7">
+      <data key="d0">0.039706910896107006</data>
+    </edge>
+    <edge source="V91" target="V79">
+      <data key="d0">0.05618015592236003</data>
+    </edge>
+    <edge source="V91" target="V7">
+      <data key="d0">0.057754870001198166</data>
+    </edge>
+    <edge source="V79" target="V7">
+      <data key="d0">0.00013351457323396154</data>
+    </edge>
+    <edge source="V70" target="V55">
+      <data key="d0">0.08195361118110722</data>
+    </edge>
+  </graph>
+</graphml>

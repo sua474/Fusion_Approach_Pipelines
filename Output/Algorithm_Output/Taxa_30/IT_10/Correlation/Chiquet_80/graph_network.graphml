@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="edge" attr.type="double" for="edge" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="V6" />
+    <node id="V29" />
+    <node id="V27" />
+    <node id="V9" />
+    <edge source="V6" target="V29">
+      <data key="d0">0.08364421157085389</data>
+    </edge>
+    <edge source="V6" target="V27">
+      <data key="d0">0.4637380094479806</data>
+    </edge>
+    <edge source="V6" target="V9">
+      <data key="d0">0.07023523514131058</data>
+    </edge>
+    <edge source="V29" target="V27">
+      <data key="d0">0.44302576755721346</data>
+    </edge>
+    <edge source="V29" target="V9">
+      <data key="d0">0.15496694310542702</data>
+    </edge>
+  </graph>
+</graphml>

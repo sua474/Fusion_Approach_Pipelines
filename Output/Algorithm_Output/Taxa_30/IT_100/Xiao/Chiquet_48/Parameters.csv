@@ -1,0 +1,8 @@
+Parameter Name,Value
+File Processed,/u2/sua474/Dataset/Chiquet/Taxa_30/Chiquet_100/Chiquet_48.csv
+Block Indexes,"[10, 20]"
+Selection Method:,max
+Discard Threshold:,0.1
+Is Iterative,False
+Start Time,2021-10-26 21:18:43.096674
+End Time,2021-10-26 21:19:27.523776

@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="edge" attr.type="double" for="edge" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="V36" />
+    <node id="V9" />
+    <node id="V16" />
+    <node id="V30" />
+    <node id="V24" />
+    <node id="V45" />
+    <node id="V37" />
+    <node id="V50" />
+    <node id="V43" />
+    <node id="V25" />
+    <node id="V35" />
+    <edge source="V36" target="V9">
+      <data key="d0">0.001618560542970049</data>
+    </edge>
+    <edge source="V36" target="V16">
+      <data key="d0">0.005623287315630998</data>
+    </edge>
+    <edge source="V36" target="V30">
+      <data key="d0">0.022147002406236127</data>
+    </edge>
+    <edge source="V36" target="V24">
+      <data key="d0">0.004089996689521369</data>
+    </edge>
+    <edge source="V36" target="V45">
+      <data key="d0">0.24447734670758614</data>
+    </edge>
+    <edge source="V36" target="V37">
+      <data key="d0">0.08756638873678013</data>
+    </edge>
+    <edge source="V36" target="V50">
+      <data key="d0">0.004089996689521369</data>
+    </edge>
+    <edge source="V36" target="V43">
+      <data key="d0">0.03710848542173961</data>
+    </edge>
+    <edge source="V36" target="V25">
+      <data key="d0">0.012520781295488725</data>
+    </edge>
+    <edge source="V36" target="V35">
+      <data key="d0">0.20816104631596422</data>
+    </edge>
+    <edge source="V9" target="V16">
+      <data key="d0">0.0012098913008008472</data>
+    </edge>
+    <edge source="V9" target="V30">
+      <data key="d0">0.0356327637156757</data>
+    </edge>
+    <edge source="V9" target="V24">
+      <data key="d0">0.010840428605201735</data>
+    </edge>
+    <edge source="V9" target="V45">
+      <data key="d0">0.2741301098927268</data>
+    </edge>
+    <edge source="V9" target="V37">
+      <data key="d0">0.11231692528322956</data>
+    </edge>
+    <edge source="V9" target="V50">
+      <data key="d0">0.010840428605201735</data>
+    </edge>
+    <edge source="V9" target="V43">
+      <data key="d0">0.0540162785850451</data>
+    </edge>
+    <edge source="V9" target="V25">
+      <data key="d0">0.023090692287127346</data>
+    </edge>
+    <edge source="V9" target="V35">
+      <data key="d0">0.22297131011418847</data>
+    </edge>
+    <edge source="V16" target="V30">
+      <data key="d0">0.04981000971676808</data>
+    </edge>
+    <edge source="V16" target="V24">
+      <data key="d0">0.019258494587549357</data>
+    </edge>
+    <edge source="V16" target="V45">
+      <data key="d0">0.30166422481187494</data>
+    </edge>
+    <edge source="V16" target="V37">
+      <data key="d0">0.13603444409916865</data>
+    </edge>
+    <edge source="V16" target="V50">
+      <data key="d0">0.019258494587549357</data>
+    </edge>
+    <edge source="V16" target="V43">
+      <data key="d0">0.07110450103029509</data>
+    </edge>
+    <edge source="V16" target="V25">
+      <data key="d0">0.03477940178345773</data>
+    </edge>
+    <edge source="V16" target="V35">
+      <data key="d0">0.23780497574001713</data>
+    </edge>
+    <edge source="V30" target="V24">
+      <data key="d0">0.007236639636597042</data>
+    </edge>
+    <edge source="V30" target="V45">
+      <data key="d0">0.15658714052981093</data>
+    </edge>
+    <edge source="V30" target="V37">
+      <data key="d0">0.022126223962734004</data>
+    </edge>
+    <edge source="V30" target="V50">
+      <data key="d0">0.007236639636597042</data>
+    </edge>
+    <edge source="V30" target="V43">
+      <data key="d0">0.0019478512258566116</data>
+    </edge>
+    <edge source="V30" target="V25">
+      <data key="d0">0.0013747110697348575</data>
+    </edge>
+    <edge source="V30" target="V35">
+      <data key="d0">0.17591222405585472</data>
+    </edge>
+    <edge source="V24" target="V45">
+      <data key="d0">0.20240225854722949</data>
+    </edge>
+    <edge source="V24" target="V37">
+      <data key="d0">0.054324458621063276</data>
+    </edge>
+    <edge source="V24" target="V43">
+      <data key="d0">0.016662047717412865</data>
+    </edge>
+    <edge source="V24" target="V25">
+      <data key="d0">0.0023068081473522906</data>
+    </edge>
+    <edge source="V24" target="V35">
+      <data key="d0">0.18990741269901745</data>
+    </edge>
+    <edge source="V45" target="V37">
+      <data key="d0">0.1060696541836681</data>
+    </edge>
+    <edge source="V45" target="V50">
+      <data key="d0">0.20240225854722949</data>
+    </edge>
+    <edge source="V45" target="V43">
+      <data key="d0">0.13759981269257082</data>
+    </edge>
+    <edge source="V45" target="V25">
+      <data key="d0">0.17508035525077992</data>
+    </edge>
+    <edge source="V45" target="V35">
+      <data key="d0">0.400580031495001</data>
+    </edge>
+    <edge source="V37" target="V50">
+      <data key="d0">0.054324458621063276</data>
+    </edge>
+    <edge source="V37" target="V43">
+      <data key="d0">0.010980263594335349</data>
+    </edge>
+    <edge source="V37" target="V25">
+      <data key="d0">0.0344359144229055</data>
+    </edge>
+    <edge source="V37" target="V35">
+      <data key="d0">0.1801549208800327</data>
+    </edge>
+    <edge source="V50" target="V43">
+      <data key="d0">0.016662047717412865</data>
+    </edge>
+    <edge source="V50" target="V25">
+      <data key="d0">0.0023068081473522906</data>
+    </edge>
+    <edge source="V50" target="V35">
+      <data key="d0">0.18990741269901745</data>
+    </edge>
+    <edge source="V43" target="V25">
+      <data key="d0">0.006589921852148128</data>
+    </edge>
+    <edge source="V43" target="V35">
+      <data key="d0">0.17334503344204133</data>
+    </edge>
+    <edge source="V25" target="V35">
+      <data key="d0">0.1805508095028393</data>
+    </edge>
+  </graph>
+</graphml>

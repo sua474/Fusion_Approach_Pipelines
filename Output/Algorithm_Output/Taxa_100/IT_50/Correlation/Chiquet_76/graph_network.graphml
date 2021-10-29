@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="edge" attr.type="double" for="edge" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="V13" />
+    <node id="V50" />
+    <node id="V98" />
+    <node id="V64" />
+    <node id="V55" />
+    <node id="V14" />
+    <node id="V99" />
+    <node id="V20" />
+    <edge source="V13" target="V50">
+      <data key="d0">0.3876275643042053</data>
+    </edge>
+    <edge source="V13" target="V20">
+      <data key="d0">0.06741662174446783</data>
+    </edge>
+    <edge source="V13" target="V98">
+      <data key="d0">2.220446049250313e-16</data>
+    </edge>
+    <edge source="V13" target="V64">
+      <data key="d0">0.031754163448145856</data>
+    </edge>
+    <edge source="V50" target="V98">
+      <data key="d0">0.3876275643042054</data>
+    </edge>
+    <edge source="V50" target="V64">
+      <data key="d0">0.4729537233052701</data>
+    </edge>
+    <edge source="V50" target="V55">
+      <data key="d0">0.38762756430420564</data>
+    </edge>
+    <edge source="V50" target="V14">
+      <data key="d0">0.38762756430420564</data>
+    </edge>
+    <edge source="V50" target="V99">
+      <data key="d0">0.3876275643042053</data>
+    </edge>
+    <edge source="V98" target="V20">
+      <data key="d0">0.06741662174446827</data>
+    </edge>
+    <edge source="V98" target="V64">
+      <data key="d0">0.031754163448145745</data>
+    </edge>
+    <edge source="V64" target="V20">
+      <data key="d0">0.1334942144819934</data>
+    </edge>
+    <edge source="V64" target="V55">
+      <data key="d0">0.031754163448145856</data>
+    </edge>
+    <edge source="V64" target="V14">
+      <data key="d0">0.031754163448145856</data>
+    </edge>
+    <edge source="V55" target="V20">
+      <data key="d0">0.06741662174446794</data>
+    </edge>
+    <edge source="V14" target="V20">
+      <data key="d0">0.06741662174446794</data>
+    </edge>
+  </graph>
+</graphml>
