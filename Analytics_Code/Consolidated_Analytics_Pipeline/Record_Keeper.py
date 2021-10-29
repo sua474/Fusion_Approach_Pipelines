@@ -8,14 +8,20 @@ class record_keeper:
 
 
     def add_record(self,aggregated_df,taxa,internal_threshold):
-        
+        '''
+        Adds the aggregated record to the exisiting dataframe for record keeping.
+        '''
         aggregated_df['Taxa'] = taxa
         aggregated_df['Internal_Threshold'] = internal_threshold
 
         self.aggregated_records = self.aggregated_records.append(aggregated_df,ignore_index=True)
     
     def get_top_performing_algorithms(self,number_of_tops):
-        #Takes average of each dataframe column and returns the top most algorithms
+        '''
+        Using the number_of_tops as the parameter which specifies the number of tops algorithms we want to 
+        find out of all the algorithms, it computes a score from aggregated record of each algorithm. Based
+        on this score, the algorithms are ranked and then return to the calling class of Compute_Analytics.
+        '''
         result_dict = {}
         top_algos = {}
 

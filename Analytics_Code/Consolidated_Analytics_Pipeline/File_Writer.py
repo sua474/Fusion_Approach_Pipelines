@@ -5,7 +5,9 @@ from os import path
 class file_writer:
 
     def write_csv(self,location,df):
-        
+        '''
+        Writes a dataframe to the specified location in the .csv format
+        '''
         directory = '/'.join(location.split('/')[0:-1])
         if(not os.path.exists(directory)):
             os.mkdir(directory)

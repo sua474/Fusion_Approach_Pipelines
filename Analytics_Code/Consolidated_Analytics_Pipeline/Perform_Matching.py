@@ -3,14 +3,21 @@ import pandas as pd
 class perform_matching:
     
     def dimensionality_check(self,algorithm_df,ground_truth_df):
-        
+        '''
+        Compares the dimensions of the output datafile of algorithm against the ground truth. Both has to
+        be the same or else it will through the error as unequality in output and ground truth referes that
+        they do not belong to the same dataset.
+        '''
         if (algorithm_df.shape[0] == ground_truth_df.shape[0] and algorithm_df.shape[1] == ground_truth_df.shape[1]):
             return True
         else:
             return False
 
     def compute_match_statistics(self,algorithm_df,ground_truth_df):
-
+        '''
+        Performs cell by cell matching of ground truth and output of algorithm. It calculates the True Positive(tp)
+        False Positve(fp), True Negative(tn) and False Negative(fn) of each dataset and return it for further analysis
+        '''
         tp,tn,fp,fn = 0,0,0,0
 
         for i in range(0, algorithm_df.shape[0]):
@@ -31,7 +38,12 @@ class perform_matching:
 
 
     def compute_overlap(self, algorithms,ground_truth):
-        
+        '''
+        It reads the ground truth data file and the algorithm's output file one by one and first performs the
+        dimensionality check to confirm that they belong to the same dataset and then compute the individual 
+        statistics of each output file of each algorithm wrt the ground truth. After computing the individual
+        stats, it return the output the calling class (Compute Analytics) which perform further analysis.
+        '''
         output = dict()
         ground_truth_df = ground_truth.get_file()
         

@@ -9,7 +9,9 @@ from Record_Keeper import record_keeper
 class compute_analytics:
 
     def __init__ (self,algorithms,base_folder,allowed_filenames,ground_truth_path,analytical_features):
-
+        '''
+        Initilizes the object
+        '''
         self.algorithms = algorithms.copy()
         self.analytical_features = analytical_features.copy()
         self.base_folder = base_folder
@@ -24,7 +26,11 @@ class compute_analytics:
             self.data_files[algorithm] = list()
 
     def load_input_file_objects(self):
-
+        '''
+        Loads the outputs of different algorithms into a dicitionary with each algorithm name as its key.
+        Note that it just creates and loads the objectsbut not read the file. Reading is done in the 
+        Perform_Matching class using the file reader object 
+        '''
         for algorithm in self.algorithms:
             location = self.base_folder +'/'+ algorithm
             for root, directories, files in os.walk(location):
@@ -37,13 +43,20 @@ class compute_analytics:
                     self.data_files[algorithm].append(file_reader(root,"Missing_File",algorithm))
     
     def load_ground_truth_objects(self):
-        
+        '''
+        Loads the ground truth objects into the dicitionary. Note that it just creates and loads the objects
+        but not read the file. Reading is done in the Perform Matching class using the file reader object 
+        '''
         for root, directories, files in os.walk(self.ground_truth_path):
             for file in files:
                 self.ground_truth[file] = file_reader(root,file,'Ground_Truth')
     
     def validate_payload(self,pay_load):
-        
+        '''
+        The job of this function is to validate if all the outputs from different algorithms belong to the
+        same datasets. If so, then it will return the numeriacal index of that dataset. Else it will return
+        the error.
+        '''
         ref_obj = pay_load.pop()
         reference = ref_obj.file_location.split('/')[-1].split('_')[-1]
         for obj in pay_load:
@@ -54,7 +67,10 @@ class compute_analytics:
         return reference
             
     def compute_analytics(self):
-        
+        '''
+        It calls the object of Perform Matching class to compare the algorithm's output wrt the ground truth
+        and saves the result for future analysis
+        '''
         matcher = perform_matching()
 
         for i in range(0, len(self.ground_truth)):
@@ -73,7 +89,9 @@ class compute_analytics:
                 self.analytics_df.loc[len(self.analytics_df)] = [algorithm]+matches[algorithm]+[int(index)]
     
     def compute_aggregate(self):
-
+        '''
+        Computes the aggregate of all analytical feature per different datasets
+        '''
         for algorithm in self.algorithms:
             algorithm_df = self.analytics_df.loc[self.analytics_df['Algorithm'] == algorithm]
             mean_dict = algorithm_df[self.analytical_features[1:]].mean()
@@ -81,7 +99,9 @@ class compute_analytics:
 
     
     def check_validity(self):
-        
+        '''
+        Checks the validity of file. Was just made for sanity check
+        '''
         for algorithm in self.data_files.keys():
             print('Algorithm {} Total Files: {}'.format( algorithm, len(self.data_files[algorithm])))
         
@@ -97,17 +117,17 @@ class compute_analytics:
     
 if __name__ == '__main__':
         
-    algorithms = ['Spiec_Easi','Xiao','Ma_Paper','Correlation','Spring']
-    output_filename = set(['Adjacency_Matrix.csv','Sign of Jaccobian for Iteration_0.csv','Metric Network.csv'])
-    analytical_features = ['Algorithm','Accuracy','Penalty']
+    algorithms = ['Spiec_Easi','Xiao','Ma_Paper','Correlation','Spring'] # Names of algorithms (same as output folder name)
+    output_filename = set(['Adjacency_Matrix.csv','Sign of Jaccobian for Iteration_0.csv','Metric Network.csv']) # Names of output files of different algorithm, so that it can only read the exact file in the output dir
+    analytical_features = ['Algorithm','Accuracy','Penalty'] #Features that are calculated for each output file wrt the ground truth
     record_keeper = record_keeper(algorithms,analytical_features) # Object Initialization
     
-    for taxa in ["Taxa_10"]:
-        for internal_threshold in ["10","50","100"]:
+    for taxa in ["Taxa_10"]: # Number of taxa to run the analytics pipeline for can include all "Taxa_30", "Taxa_50" and "Taxa_100" as well
+        for internal_threshold in ["10","50","100"]: # Different internal threshold at which the dataset was created (This threshold is set in the Chiquet data generation code)
             print("Executing Taxa {} and Internal Threshold {}".format(taxa,internal_threshold))
         ######### Input Parameters #####################
-            base_path = "/u2/sua474/Fusion_Approach_Pipelines/Output/{}/IT_{}".format(taxa,internal_threshold)
-            ground_truth_path = "/u2/sua474/Dataset/Chiquet/{}/Ground_Truth_{}/".format(taxa,internal_threshold)
+            base_path = "/u2/sua474/Fusion_Approach_Pipelines/Output/{}/IT_{}".format(taxa,internal_threshold) #Path where algorithm output is written
+            ground_truth_path = "/u2/sua474/Dataset/Chiquet/{}/Ground_Truth_{}/".format(taxa,internal_threshold) # Path where ground truth files are
         ################################################
     
         ######## Object Initialization ####################
