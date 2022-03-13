@@ -8,7 +8,7 @@ class file_writer:
         '''
         Writes a dataframe to the specified location in the .csv format
         '''
-        directory = '/'.join(location.split('/')[0:-1])
+        directory = os.path.dirname(location)
         if(not os.path.exists(directory)):
             os.mkdir(directory)
         df.to_csv(location,index=False)

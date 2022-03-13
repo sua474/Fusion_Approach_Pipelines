@@ -27,13 +27,13 @@ class file_reader:
         Reads the file using the location and name as set at the time of object initialization and then 
         performs the normalization and return it to the calling class (Perform_Matching).
         '''
-        loading_path = self.file_location+'/'+self.file_name
+        loading_path = os.path.join(self.file_location, self.file_name)
         if(os.path.isfile(loading_path)):
             df = pd.read_csv(loading_path)
             df = self.normalize_df(df.copy())
             return df
         else:
-            #print('File Path: {} Do not Exist'.format(loading_path))
+            print('File Path: {} Do not Exist'.format(loading_path))
             return False
 
     def get_simulated_dataset_name(self):

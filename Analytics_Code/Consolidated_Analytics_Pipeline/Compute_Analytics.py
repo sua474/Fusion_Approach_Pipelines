@@ -1,3 +1,4 @@
+from email.mime import base
 import pandas as pd 
 import os
 import sys
@@ -32,7 +33,7 @@ class compute_analytics:
         Perform_Matching class using the file reader object 
         '''
         for algorithm in self.algorithms:
-            location = self.base_folder +'/'+ algorithm
+            location = os.path.join(self.base_folder, algorithm)
             for root, directories, files in os.walk(location):
                 file_found = False
                 for file in files:
@@ -47,6 +48,7 @@ class compute_analytics:
         Loads the ground truth objects into the dicitionary. Note that it just creates and loads the objects
         but not read the file. Reading is done in the Perform Matching class using the file reader object 
         '''
+        assert os.path.exists(self.ground_truth_path), "Ground Truth Path Does Not Exist"
         for root, directories, files in os.walk(self.ground_truth_path):
             for file in files:
                 self.ground_truth[file] = file_reader(root,file,'Ground_Truth')
@@ -58,9 +60,9 @@ class compute_analytics:
         the error.
         '''
         ref_obj = pay_load.pop()
-        reference = ref_obj.file_location.split('/')[-1].split('_')[-1]
+        reference = os.path.basename(ref_obj.file_location).split('_')[-1]
         for obj in pay_load:
-            index = obj.file_location.split('/')[-1].split('_')[-1]
+            index = os.path.basename(obj.file_location).split('_')[-1]
             if(index!=reference):
                 sys.exit("Files Do Not Belong to the Same Ecological Dataset")
         
@@ -121,15 +123,18 @@ if __name__ == '__main__':
     output_filename = set(['Adjacency_Matrix.csv','Sign of Jaccobian for Iteration_0.csv','Metric Network.csv']) # Names of output files of different algorithm, so that it can only read the exact file in the output dir
     analytical_features = ['Algorithm','Accuracy','Penalty'] #Features that are calculated for each output file wrt the ground truth
     record_keeper = record_keeper(algorithms,analytical_features) # Object Initialization
-    
+    output_path = "..\..\Output\Analytics_Output\Aggregate.csv" # Path of outputfolder
+
     for taxa in ["Taxa_10"]: # Number of taxa to run the analytics pipeline for can include all "Taxa_30", "Taxa_50" and "Taxa_100" as well
         for internal_threshold in ["10","50","100"]: # Different internal threshold at which the dataset was created (This threshold is set in the Chiquet data generation code)
             print("Executing Taxa {} and Internal Threshold {}".format(taxa,internal_threshold))
         ######### Input Parameters #####################
-            base_path = "/u2/sua474/Fusion_Approach_Pipelines/Output/{}/IT_{}".format(taxa,internal_threshold) #Path where algorithm output is written
-            ground_truth_path = "/u2/sua474/Dataset/Chiquet/{}/Ground_Truth_{}/".format(taxa,internal_threshold) # Path where ground truth files are
+            ground_truth_path = "..\..\Dataset\Chiquet_Simulated_Dataset\{}\Ground_Truth_{}".format(taxa,internal_threshold) # Path where ground truth files are
+            base_path = "..\..\Output\Algorithm_Output\{}\IT_{}".format(taxa,internal_threshold) #Path where algorithm output is written
+            ground_truth_path = os.path.abspath(ground_truth_path) #Creating the complete absolute path
+            base_path = os.path.abspath(base_path) #Creating the complete absolute path
         ################################################
-    
+
         ######## Object Initialization ####################
             analytics = compute_analytics(algorithms,base_path,output_filename,ground_truth_path,analytical_features)
         ######### Start Analytics #########################
@@ -141,5 +146,5 @@ if __name__ == '__main__':
             
     print(record_keeper.get_top_performing_algorithms(3))
     file_writer = file_writer()
-    file_writer.write_csv("/u2/sua474/Fusion_Approach_Analytics/Output/Baseline_Result/Aggregate.csv",record_keeper.aggregated_records)
+    file_writer.write_csv(os.path.abspath(output_path),record_keeper.aggregated_records)
     
