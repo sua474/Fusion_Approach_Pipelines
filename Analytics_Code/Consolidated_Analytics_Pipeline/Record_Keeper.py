@@ -25,7 +25,7 @@ class record_keeper:
         result_dict = {}
         top_algos = {}
 
-        for i in range(0,self.aggregated_records.shape[0]):
+        for i in range(self.aggregated_records.shape[0]):
             algorithm = self.aggregated_records.iloc[i,0] 
             score = self.aggregated_records.iloc[i,1] - self.aggregated_records.iloc[i,2]
             

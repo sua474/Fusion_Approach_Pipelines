@@ -63,8 +63,7 @@ class compute_analytics:
         reference = os.path.basename(ref_obj.file_location).split('_')[-1]
         for obj in pay_load:
             index = os.path.basename(obj.file_location).split('_')[-1]
-            if(index!=reference):
-                sys.exit("Files Do Not Belong to the Same Ecological Dataset")
+            assert index!=reference, sys.exit("Files Do Not Belong to the Same Ecological Dataset")
         
         return reference
             
@@ -75,11 +74,8 @@ class compute_analytics:
         '''
         matcher = perform_matching()
 
-        for i in range(0, len(self.ground_truth)):
-            pay_load = []
-            for algorithm in self.algorithms:
-                if(len(self.data_files[algorithm])>=1):
-                    pay_load.append(self.data_files[algorithm].pop())
+        for i in range(len(self.ground_truth)):
+            pay_load = [self.data_files[algorithm].pop() for algorithm in self.algorithms if len(self.data_files[algorithm])>=1]
             
             index = self.validate_payload(pay_load.copy())
             ground_truth_file_name = 'Ground_Truth_{}.csv'.format(index)

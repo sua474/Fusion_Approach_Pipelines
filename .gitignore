@@ -1,3 +1,5 @@
 *.DS_Store
 
 
+Analytics_Code/Consolidated_Analytics_Pipeline/__pycache__/File_Reader.cpython-36.pyc
+*.pyc
