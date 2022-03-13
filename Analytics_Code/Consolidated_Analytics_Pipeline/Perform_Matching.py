@@ -50,14 +50,14 @@ class perform_matching:
         for algorithm in algorithms:
             algorithm_df = algorithm.get_file()
             if(isinstance(algorithm_df,bool)):
-                output[algorithm.algorithm_name] = [0]*2 #multiplied by 5 to have equal number of zeros for each analytical value
+                output[algorithm.algorithm_name] = [0]*len(algorithm) #multiplied by 5 to have equal number of zeros for each analytical value
 
             elif(self.dimensionality_check(algorithm_df,ground_truth_df)):
                 output[algorithm.algorithm_name] = self.compute_match_statistics(algorithm_df,ground_truth_df)
             
             else:
                 print('The Algorithm {} and Ground Truth Do not have the same dimensions'.format(algorithm.algorithm_name))
-                output[algorithm.algorithm_name] = [0]*2 #multiplied by 5 to have equal number of zeros for each analytical value
+                output[algorithm.algorithm_name] = [0]*len(algorithm) #multiplied by 5 to have equal number of zeros for each analytical value
                 
         return output.copy()
                 

@@ -74,7 +74,7 @@ class compute_analytics:
         '''
         matcher = perform_matching()
 
-        for i in range(len(self.ground_truth)):
+        for _ in range(len(self.ground_truth)): #Running the loop for all ground_truth files
             pay_load = [self.data_files[algorithm].pop() for algorithm in self.algorithms if len(self.data_files[algorithm])>=1]
             
             index = self.validate_payload(pay_load.copy())
